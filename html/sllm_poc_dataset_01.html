@@ -1,0 +1,697 @@
+<!DOCTYPE HTML>
+<html lang="ko"> 
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><!-- IE에서만 -->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>BLLM</title>
+    <script type="text/javascript" src="../js/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="../js/common.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/common.css">
+    <link rel="stylesheet" type="text/css" href="../css/layout.css">
+    <link rel="stylesheet" type="text/css" href="../css/sub.css">
+</head>
+<body>
+    <div id="lp_layout">
+        <div class="lp_wrap lpServiceStop">
+            <div class="lp_head">
+                <h2 class="logo">bLLM</h2>
+            </div>
+            <div class="lp_body">
+                <div class="tit">
+                    <h3>대화형 AI 서비스 만들기를<br>종료하시겠습니까?</h3>
+                </div>
+                <div class="btn">
+                    <button type="button" class="btn-type2 lpClose">계속하기</button>
+                    <button type="button" class="btn-type3">종료하기</button>
+                </div>
+            </div>
+            <a href="#" class="lp_close lpClose">닫기</a>
+        </div>
+    </div>
+    <div id="layout">
+        <!--left_layout-->
+        <div id="left_layout">
+            <h1 class="logo"><a href="#">BLLM</a></h1>
+        </div>
+        <!--//left_layout-->
+        <!--top_layout-->
+        <div id="top_layout">
+            <div class="info">
+                <p class="user">testworksadmin</p>
+                <a href="#" class="btn btn-logout">로그아웃</a>
+            </div>
+        </div>
+        <!--body_layout-->
+        <div id="body_layout">
+            <!--navi-box-->
+            <div class="navi-box">
+                <button type="button" class="page-prev lpOpen" data-lp="lpServiceStop">이전</button>
+                <div class="navi">
+                    <button type="button" class="btn" disabled>이전</button>
+                    <ul class="step">
+                        <li>
+                            <button type="button" class="active">데이터셋 준비</button>
+                        </li>
+                        <li>
+                            <button type="button" disabled>기초 모델 선택</button>
+                        </li>
+                        <li>
+                            <button type="button" disabled>모델 생성</button>
+                        </li>
+                        <li>
+                            <button type="button" disabled>RLHF 모델 강화 </button>
+                        </li>
+                        <li>
+                            <button type="button" disabled>템플릿 선택</button>
+                        </li>
+                    </ul>
+                    <button type="button" class="btn">다음</button>
+                </div>
+            </div>
+            <!--//navi-box-->
+            <div class="cont-head">
+                <div class="layout">
+                    <h2 class="tit">데이터셋 준비</h2>
+                    <div class="flex-sb">
+                        <div class="sb-left">
+                            <div class="select-button">
+                                <select style="width: 330px;">
+                                    <option>dataset_국민카드_고객센터</option>
+                                </select>
+                                <button type="button" class="btn-type1">데이터셋 선택 완료</button>
+                            </div>
+                        </div>
+                        <div class="sb-right flex-right">
+                            <p class="count">
+                                <span>82,392</span>
+                                data rows
+                            </p>
+                            <ul class="util">
+                                <li>
+                                    <button type="button" class="btn ico-info">정보</button>
+                                </li>
+                                <li>
+                                    <button type="button" class="btn ico-filter">필터</button>
+                                </li>
+                                <li>
+                                    <button type="button" class="btn ico-plus">추가</button>
+                                </li>
+                                <li>
+                                    <button type="button" class="btn ico-del">삭제</button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="list-card">
+                <div class="layout">
+                    <ul>
+                        <li class="item">
+                            <label class="chk">
+                                <input type="checkbox" />
+                                <span>선택</span>
+                            </label>
+                            <p class="data"> {
+                                "instruction": "국민행복카드 
+                            발급 후 바우처 신청을 해야 하나요?",
+                                "input": "",
+                                "output": "국민행복카드 발급은 
+                            바우처 사업의 신청과는 별개입니다.
+                            바우처 사업에 지원대상이 맞는지 
+                            확인 후 바우처 신청 경로로 
+                            신청하셔야 합니다.>>국민행복카드 발급은 
+                            바우처 사업의 신청과는 별개입니다.
+                            바우처 사업에 지원대상이 맞는지 
+                            확인 후 바우처 신청 경로로 
+                            신청하셔야 합니다.>>국민행복카드 </p>
+                        </li>
+                        <li class="item">
+                            <label class="chk">
+                                <input type="checkbox" />
+                                <span>선택</span>
+                            </label>
+                            <p class="data"> {
+                                "instruction": "국민행복카드 
+                            발급 후 바우처 신청을 해야 하나요?",
+                                "input": "",
+                                "output": "국민행복카드 발급은 
+                            바우처 사업의 신청과는 별개입니다.
+                            바우처 사업에 지원대상이 맞는지 
+                            확인 후 바우처 신청 경로로 
+                            신청하셔야 합니다.>>국민행복카드 발급은 
+                            바우처 사업의 신청과는 별개입니다.
+                            바우처 사업에 지원대상이 맞는지 
+                            확인 후 바우처 신청 경로로 
+                            신청하셔야 합니다.>>국민행복카드 </p>
+                        </li>
+                        <li class="item">
+                            <label class="chk">
+                                <input type="checkbox" />
+                                <span>선택</span>
+                            </label>
+                            <p class="data"> {
+                                "instruction": "국민행복카드 
+                            발급 후 바우처 신청을 해야 하나요?",
+                                "input": "",
+                                "output": "국민행복카드 발급은 
+                            바우처 사업의 신청과는 별개입니다.
+                            바우처 사업에 지원대상이 맞는지 
+                            확인 후 바우처 신청 경로로 
+                            신청하셔야 합니다.>>국민행복카드 발급은 
+                            바우처 사업의 신청과는 별개입니다.
+                            바우처 사업에 지원대상이 맞는지 
+                            확인 후 바우처 신청 경로로 
+                            신청하셔야 합니다.>>국민행복카드 </p>
+                        </li>
+                        <li class="item">
+                            <label class="chk">
+                                <input type="checkbox" />
+                                <span>선택</span>
+                            </label>
+                            <p class="data"> {
+                                "instruction": "국민행복카드 
+                            발급 후 바우처 신청을 해야 하나요?",
+                                "input": "",
+                                "output": "국민행복카드 발급은 
+                            바우처 사업의 신청과는 별개입니다.
+                            바우처 사업에 지원대상이 맞는지 
+                            확인 후 바우처 신청 경로로 
+                            신청하셔야 합니다.>>국민행복카드 발급은 
+                            바우처 사업의 신청과는 별개입니다.
+                            바우처 사업에 지원대상이 맞는지 
+                            확인 후 바우처 신청 경로로 
+                            신청하셔야 합니다.>>국민행복카드 </p>
+                        </li>
+                        <li class="item">
+                            <label class="chk">
+                                <input type="checkbox" />
+                                <span>선택</span>
+                            </label>
+                            <p class="data"> {
+                                "instruction": "국민행복카드 
+                            발급 후 바우처 신청을 해야 하나요?",
+                                "input": "",
+                                "output": "국민행복카드 발급은 
+                            바우처 사업의 신청과는 별개입니다.
+                            바우처 사업에 지원대상이 맞는지 
+                            확인 후 바우처 신청 경로로 
+                            신청하셔야 합니다.>>국민행복카드 발급은 
+                            바우처 사업의 신청과는 별개입니다.
+                            바우처 사업에 지원대상이 맞는지 
+                            확인 후 바우처 신청 경로로 
+                            신청하셔야 합니다.>>국민행복카드 </p>
+                        </li>
+                        <li class="item">
+                            <label class="chk">
+                                <input type="checkbox" />
+                                <span>선택</span>
+                            </label>
+                            <p class="data"> {
+                                "instruction": "국민행복카드 
+                            발급 후 바우처 신청을 해야 하나요?",
+                                "input": "",
+                                "output": "국민행복카드 발급은 
+                            바우처 사업의 신청과는 별개입니다.
+                            바우처 사업에 지원대상이 맞는지 
+                            확인 후 바우처 신청 경로로 
+                            신청하셔야 합니다.>>국민행복카드 발급은 
+                            바우처 사업의 신청과는 별개입니다.
+                            바우처 사업에 지원대상이 맞는지 
+                            확인 후 바우처 신청 경로로 
+                            신청하셔야 합니다.>>국민행복카드 </p>
+                        </li>
+                        <li class="item">
+                            <label class="chk">
+                                <input type="checkbox" />
+                                <span>선택</span>
+                            </label>
+                            <p class="data"> {
+                                "instruction": "국민행복카드 
+                            발급 후 바우처 신청을 해야 하나요?",
+                                "input": "",
+                                "output": "국민행복카드 발급은 
+                            바우처 사업의 신청과는 별개입니다.
+                            바우처 사업에 지원대상이 맞는지 
+                            확인 후 바우처 신청 경로로 
+                            신청하셔야 합니다.>>국민행복카드 발급은 
+                            바우처 사업의 신청과는 별개입니다.
+                            바우처 사업에 지원대상이 맞는지 
+                            확인 후 바우처 신청 경로로 
+                            신청하셔야 합니다.>>국민행복카드 </p>
+                        </li>
+                        <li class="item">
+                            <label class="chk">
+                                <input type="checkbox" />
+                                <span>선택</span>
+                            </label>
+                            <p class="data"> {
+                                "instruction": "국민행복카드 
+                            발급 후 바우처 신청을 해야 하나요?",
+                                "input": "",
+                                "output": "국민행복카드 발급은 
+                            바우처 사업의 신청과는 별개입니다.
+                            바우처 사업에 지원대상이 맞는지 
+                            확인 후 바우처 신청 경로로 
+                            신청하셔야 합니다.>>국민행복카드 발급은 
+                            바우처 사업의 신청과는 별개입니다.
+                            바우처 사업에 지원대상이 맞는지 
+                            확인 후 바우처 신청 경로로 
+                            신청하셔야 합니다.>>국민행복카드 </p>
+                        </li>
+                        <li class="item">
+                            <label class="chk">
+                                <input type="checkbox" />
+                                <span>선택</span>
+                            </label>
+                            <p class="data"> {
+                                "instruction": "국민행복카드 
+                            발급 후 바우처 신청을 해야 하나요?",
+                                "input": "",
+                                "output": "국민행복카드 발급은 
+                            바우처 사업의 신청과는 별개입니다.
+                            바우처 사업에 지원대상이 맞는지 
+                            확인 후 바우처 신청 경로로 
+                            신청하셔야 합니다.>>국민행복카드 발급은 
+                            바우처 사업의 신청과는 별개입니다.
+                            바우처 사업에 지원대상이 맞는지 
+                            확인 후 바우처 신청 경로로 
+                            신청하셔야 합니다.>>국민행복카드 </p>
+                        </li>
+                        <li class="item">
+                            <label class="chk">
+                                <input type="checkbox" />
+                                <span>선택</span>
+                            </label>
+                            <p class="data"> {
+                                "instruction": "국민행복카드 
+                            발급 후 바우처 신청을 해야 하나요?",
+                                "input": "",
+                                "output": "국민행복카드 발급은 
+                            바우처 사업의 신청과는 별개입니다.
+                            바우처 사업에 지원대상이 맞는지 
+                            확인 후 바우처 신청 경로로 
+                            신청하셔야 합니다.>>국민행복카드 발급은 
+                            바우처 사업의 신청과는 별개입니다.
+                            바우처 사업에 지원대상이 맞는지 
+                            확인 후 바우처 신청 경로로 
+                            신청하셔야 합니다.>>국민행복카드 </p>
+                        </li>
+                        <li class="item">
+                            <label class="chk">
+                                <input type="checkbox" />
+                                <span>선택</span>
+                            </label>
+                            <p class="data"> {
+                                "instruction": "국민행복카드 
+                            발급 후 바우처 신청을 해야 하나요?",
+                                "input": "",
+                                "output": "국민행복카드 발급은 
+                            바우처 사업의 신청과는 별개입니다.
+                            바우처 사업에 지원대상이 맞는지 
+                            확인 후 바우처 신청 경로로 
+                            신청하셔야 합니다.>>국민행복카드 발급은 
+                            바우처 사업의 신청과는 별개입니다.
+                            바우처 사업에 지원대상이 맞는지 
+                            확인 후 바우처 신청 경로로 
+                            신청하셔야 합니다.>>국민행복카드 </p>
+                        </li>
+                        <li class="item">
+                            <label class="chk">
+                                <input type="checkbox" />
+                                <span>선택</span>
+                            </label>
+                            <p class="data"> {
+                                "instruction": "국민행복카드 
+                            발급 후 바우처 신청을 해야 하나요?",
+                                "input": "",
+                                "output": "국민행복카드 발급은 
+                            바우처 사업의 신청과는 별개입니다.
+                            바우처 사업에 지원대상이 맞는지 
+                            확인 후 바우처 신청 경로로 
+                            신청하셔야 합니다.>>국민행복카드 발급은 
+                            바우처 사업의 신청과는 별개입니다.
+                            바우처 사업에 지원대상이 맞는지 
+                            확인 후 바우처 신청 경로로 
+                            신청하셔야 합니다.>>국민행복카드 </p>
+                        </li>
+                        <li class="item">
+                            <label class="chk">
+                                <input type="checkbox" />
+                                <span>선택</span>
+                            </label>
+                            <p class="data"> {
+                                "instruction": "국민행복카드 
+                            발급 후 바우처 신청을 해야 하나요?",
+                                "input": "",
+                                "output": "국민행복카드 발급은 
+                            바우처 사업의 신청과는 별개입니다.
+                            바우처 사업에 지원대상이 맞는지 
+                            확인 후 바우처 신청 경로로 
+                            신청하셔야 합니다.>>국민행복카드 발급은 
+                            바우처 사업의 신청과는 별개입니다.
+                            바우처 사업에 지원대상이 맞는지 
+                            확인 후 바우처 신청 경로로 
+                            신청하셔야 합니다.>>국민행복카드 </p>
+                        </li>
+                        <li class="item">
+                            <label class="chk">
+                                <input type="checkbox" />
+                                <span>선택</span>
+                            </label>
+                            <p class="data"> {
+                                "instruction": "국민행복카드 
+                            발급 후 바우처 신청을 해야 하나요?",
+                                "input": "",
+                                "output": "국민행복카드 발급은 
+                            바우처 사업의 신청과는 별개입니다.
+                            바우처 사업에 지원대상이 맞는지 
+                            확인 후 바우처 신청 경로로 
+                            신청하셔야 합니다.>>국민행복카드 발급은 
+                            바우처 사업의 신청과는 별개입니다.
+                            바우처 사업에 지원대상이 맞는지 
+                            확인 후 바우처 신청 경로로 
+                            신청하셔야 합니다.>>국민행복카드 </p>
+                        </li>
+                        <li class="item">
+                            <label class="chk">
+                                <input type="checkbox" />
+                                <span>선택</span>
+                            </label>
+                            <p class="data"> {
+                                "instruction": "국민행복카드 
+                            발급 후 바우처 신청을 해야 하나요?",
+                                "input": "",
+                                "output": "국민행복카드 발급은 
+                            바우처 사업의 신청과는 별개입니다.
+                            바우처 사업에 지원대상이 맞는지 
+                            확인 후 바우처 신청 경로로 
+                            신청하셔야 합니다.>>국민행복카드 발급은 
+                            바우처 사업의 신청과는 별개입니다.
+                            바우처 사업에 지원대상이 맞는지 
+                            확인 후 바우처 신청 경로로 
+                            신청하셔야 합니다.>>국민행복카드 </p>
+                        </li>
+                        <li class="item">
+                            <label class="chk">
+                                <input type="checkbox" />
+                                <span>선택</span>
+                            </label>
+                            <p class="data"> {
+                                "instruction": "국민행복카드 
+                            발급 후 바우처 신청을 해야 하나요?",
+                                "input": "",
+                                "output": "국민행복카드 발급은 
+                            바우처 사업의 신청과는 별개입니다.
+                            바우처 사업에 지원대상이 맞는지 
+                            확인 후 바우처 신청 경로로 
+                            신청하셔야 합니다.>>국민행복카드 발급은 
+                            바우처 사업의 신청과는 별개입니다.
+                            바우처 사업에 지원대상이 맞는지 
+                            확인 후 바우처 신청 경로로 
+                            신청하셔야 합니다.>>국민행복카드 </p>
+                        </li>
+                        <li class="item">
+                            <label class="chk">
+                                <input type="checkbox" />
+                                <span>선택</span>
+                            </label>
+                            <p class="data"> {
+                                "instruction": "국민행복카드 
+                            발급 후 바우처 신청을 해야 하나요?",
+                                "input": "",
+                                "output": "국민행복카드 발급은 
+                            바우처 사업의 신청과는 별개입니다.
+                            바우처 사업에 지원대상이 맞는지 
+                            확인 후 바우처 신청 경로로 
+                            신청하셔야 합니다.>>국민행복카드 발급은 
+                            바우처 사업의 신청과는 별개입니다.
+                            바우처 사업에 지원대상이 맞는지 
+                            확인 후 바우처 신청 경로로 
+                            신청하셔야 합니다.>>국민행복카드 </p>
+                        </li>
+                        <li class="item">
+                            <label class="chk">
+                                <input type="checkbox" />
+                                <span>선택</span>
+                            </label>
+                            <p class="data"> {
+                                "instruction": "국민행복카드 
+                            발급 후 바우처 신청을 해야 하나요?",
+                                "input": "",
+                                "output": "국민행복카드 발급은 
+                            바우처 사업의 신청과는 별개입니다.
+                            바우처 사업에 지원대상이 맞는지 
+                            확인 후 바우처 신청 경로로 
+                            신청하셔야 합니다.>>국민행복카드 발급은 
+                            바우처 사업의 신청과는 별개입니다.
+                            바우처 사업에 지원대상이 맞는지 
+                            확인 후 바우처 신청 경로로 
+                            신청하셔야 합니다.>>국민행복카드 </p>
+                        </li>
+                        <li class="item">
+                            <label class="chk">
+                                <input type="checkbox" />
+                                <span>선택</span>
+                            </label>
+                            <p class="data"> {
+                                "instruction": "국민행복카드 
+                            발급 후 바우처 신청을 해야 하나요?",
+                                "input": "",
+                                "output": "국민행복카드 발급은 
+                            바우처 사업의 신청과는 별개입니다.
+                            바우처 사업에 지원대상이 맞는지 
+                            확인 후 바우처 신청 경로로 
+                            신청하셔야 합니다.>>국민행복카드 발급은 
+                            바우처 사업의 신청과는 별개입니다.
+                            바우처 사업에 지원대상이 맞는지 
+                            확인 후 바우처 신청 경로로 
+                            신청하셔야 합니다.>>국민행복카드 </p>
+                        </li>
+                        <li class="item">
+                            <label class="chk">
+                                <input type="checkbox" />
+                                <span>선택</span>
+                            </label>
+                            <p class="data"> {
+                                "instruction": "국민행복카드 
+                            발급 후 바우처 신청을 해야 하나요?",
+                                "input": "",
+                                "output": "국민행복카드 발급은 
+                            바우처 사업의 신청과는 별개입니다.
+                            바우처 사업에 지원대상이 맞는지 
+                            확인 후 바우처 신청 경로로 
+                            신청하셔야 합니다.>>국민행복카드 발급은 
+                            바우처 사업의 신청과는 별개입니다.
+                            바우처 사업에 지원대상이 맞는지 
+                            확인 후 바우처 신청 경로로 
+                            신청하셔야 합니다.>>국민행복카드 </p>
+                        </li>
+                        <li class="item">
+                            <label class="chk">
+                                <input type="checkbox" />
+                                <span>선택</span>
+                            </label>
+                            <p class="data"> {
+                                "instruction": "국민행복카드 
+                            발급 후 바우처 신청을 해야 하나요?",
+                                "input": "",
+                                "output": "국민행복카드 발급은 
+                            바우처 사업의 신청과는 별개입니다.
+                            바우처 사업에 지원대상이 맞는지 
+                            확인 후 바우처 신청 경로로 
+                            신청하셔야 합니다.>>국민행복카드 발급은 
+                            바우처 사업의 신청과는 별개입니다.
+                            바우처 사업에 지원대상이 맞는지 
+                            확인 후 바우처 신청 경로로 
+                            신청하셔야 합니다.>>국민행복카드 </p>
+                        </li>
+                        <li class="item">
+                            <label class="chk">
+                                <input type="checkbox" />
+                                <span>선택</span>
+                            </label>
+                            <p class="data"> {
+                                "instruction": "국민행복카드 
+                            발급 후 바우처 신청을 해야 하나요?",
+                                "input": "",
+                                "output": "국민행복카드 발급은 
+                            바우처 사업의 신청과는 별개입니다.
+                            바우처 사업에 지원대상이 맞는지 
+                            확인 후 바우처 신청 경로로 
+                            신청하셔야 합니다.>>국민행복카드 발급은 
+                            바우처 사업의 신청과는 별개입니다.
+                            바우처 사업에 지원대상이 맞는지 
+                            확인 후 바우처 신청 경로로 
+                            신청하셔야 합니다.>>국민행복카드 </p>
+                        </li>
+                        <li class="item">
+                            <label class="chk">
+                                <input type="checkbox" />
+                                <span>선택</span>
+                            </label>
+                            <p class="data"> {
+                                "instruction": "국민행복카드 
+                            발급 후 바우처 신청을 해야 하나요?",
+                                "input": "",
+                                "output": "국민행복카드 발급은 
+                            바우처 사업의 신청과는 별개입니다.
+                            바우처 사업에 지원대상이 맞는지 
+                            확인 후 바우처 신청 경로로 
+                            신청하셔야 합니다.>>국민행복카드 발급은 
+                            바우처 사업의 신청과는 별개입니다.
+                            바우처 사업에 지원대상이 맞는지 
+                            확인 후 바우처 신청 경로로 
+                            신청하셔야 합니다.>>국민행복카드 </p>
+                        </li>
+                        <li class="item">
+                            <label class="chk">
+                                <input type="checkbox" />
+                                <span>선택</span>
+                            </label>
+                            <p class="data"> {
+                                "instruction": "국민행복카드 
+                            발급 후 바우처 신청을 해야 하나요?",
+                                "input": "",
+                                "output": "국민행복카드 발급은 
+                            바우처 사업의 신청과는 별개입니다.
+                            바우처 사업에 지원대상이 맞는지 
+                            확인 후 바우처 신청 경로로 
+                            신청하셔야 합니다.>>국민행복카드 발급은 
+                            바우처 사업의 신청과는 별개입니다.
+                            바우처 사업에 지원대상이 맞는지 
+                            확인 후 바우처 신청 경로로 
+                            신청하셔야 합니다.>>국민행복카드 </p>
+                        </li>
+                        <li class="item">
+                            <label class="chk">
+                                <input type="checkbox" />
+                                <span>선택</span>
+                            </label>
+                            <p class="data"> {
+                                "instruction": "국민행복카드 
+                            발급 후 바우처 신청을 해야 하나요?",
+                                "input": "",
+                                "output": "국민행복카드 발급은 
+                            바우처 사업의 신청과는 별개입니다.
+                            바우처 사업에 지원대상이 맞는지 
+                            확인 후 바우처 신청 경로로 
+                            신청하셔야 합니다.>>국민행복카드 발급은 
+                            바우처 사업의 신청과는 별개입니다.
+                            바우처 사업에 지원대상이 맞는지 
+                            확인 후 바우처 신청 경로로 
+                            신청하셔야 합니다.>>국민행복카드 </p>
+                        </li>
+                        <li class="item">
+                            <label class="chk">
+                                <input type="checkbox" />
+                                <span>선택</span>
+                            </label>
+                            <p class="data"> {
+                                "instruction": "국민행복카드 
+                            발급 후 바우처 신청을 해야 하나요?",
+                                "input": "",
+                                "output": "국민행복카드 발급은 
+                            바우처 사업의 신청과는 별개입니다.
+                            바우처 사업에 지원대상이 맞는지 
+                            확인 후 바우처 신청 경로로 
+                            신청하셔야 합니다.>>국민행복카드 발급은 
+                            바우처 사업의 신청과는 별개입니다.
+                            바우처 사업에 지원대상이 맞는지 
+                            확인 후 바우처 신청 경로로 
+                            신청하셔야 합니다.>>국민행복카드 </p>
+                        </li>
+                        <li class="item">
+                            <label class="chk">
+                                <input type="checkbox" />
+                                <span>선택</span>
+                            </label>
+                            <p class="data"> {
+                                "instruction": "국민행복카드 
+                            발급 후 바우처 신청을 해야 하나요?",
+                                "input": "",
+                                "output": "국민행복카드 발급은 
+                            바우처 사업의 신청과는 별개입니다.
+                            바우처 사업에 지원대상이 맞는지 
+                            확인 후 바우처 신청 경로로 
+                            신청하셔야 합니다.>>국민행복카드 발급은 
+                            바우처 사업의 신청과는 별개입니다.
+                            바우처 사업에 지원대상이 맞는지 
+                            확인 후 바우처 신청 경로로 
+                            신청하셔야 합니다.>>국민행복카드 </p>
+                        </li>
+                        <li class="item">
+                            <label class="chk">
+                                <input type="checkbox" />
+                                <span>선택</span>
+                            </label>
+                            <p class="data"> {
+                                "instruction": "국민행복카드 
+                            발급 후 바우처 신청을 해야 하나요?",
+                                "input": "",
+                                "output": "국민행복카드 발급은 
+                            바우처 사업의 신청과는 별개입니다.
+                            바우처 사업에 지원대상이 맞는지 
+                            확인 후 바우처 신청 경로로 
+                            신청하셔야 합니다.>>국민행복카드 발급은 
+                            바우처 사업의 신청과는 별개입니다.
+                            바우처 사업에 지원대상이 맞는지 
+                            확인 후 바우처 신청 경로로 
+                            신청하셔야 합니다.>>국민행복카드 </p>
+                        </li>
+                        <li class="item">
+                            <label class="chk">
+                                <input type="checkbox" />
+                                <span>선택</span>
+                            </label>
+                            <p class="data"> {
+                                "instruction": "국민행복카드 
+                            발급 후 바우처 신청을 해야 하나요?",
+                                "input": "",
+                                "output": "국민행복카드 발급은 
+                            바우처 사업의 신청과는 별개입니다.
+                            바우처 사업에 지원대상이 맞는지 
+                            확인 후 바우처 신청 경로로 
+                            신청하셔야 합니다.>>국민행복카드 발급은 
+                            바우처 사업의 신청과는 별개입니다.
+                            바우처 사업에 지원대상이 맞는지 
+                            확인 후 바우처 신청 경로로 
+                            신청하셔야 합니다.>>국민행복카드 </p>
+                        </li>
+                        <li class="item">
+                            <label class="chk">
+                                <input type="checkbox" />
+                                <span>선택</span>
+                            </label>
+                            <p class="data"> {
+                                "instruction": "국민행복카드 
+                            발급 후 바우처 신청을 해야 하나요?",
+                                "input": "",
+                                "output": "국민행복카드 발급은 
+                            바우처 사업의 신청과는 별개입니다.
+                            바우처 사업에 지원대상이 맞는지 
+                            확인 후 바우처 신청 경로로 
+                            신청하셔야 합니다.>>국민행복카드 발급은 
+                            바우처 사업의 신청과는 별개입니다.
+                            바우처 사업에 지원대상이 맞는지 
+                            확인 후 바우처 신청 경로로 
+                            신청하셔야 합니다.>>국민행복카드 </p>
+                        </li>
+                    </ul>
+                    <div class="btn-more">
+                        <button type="button" class="btn">데이터 더보기</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--//body_layout-->
+        <!--foot_layout-->
+        <div id="foot_layout">
+            <p class="copy">Copyright ⓒ 2024 Testworks.</p>
+        </div>
+        <!--//foot_layout-->
+    </div>
+</body>
+</html>
+

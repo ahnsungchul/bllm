@@ -1,0 +1,101 @@
+@charset "utf-8";
+
+.select-button{ display: flex;}
+.select-button select{ height: 44px; background: url(../img/ico/icon_select_down.png) no-repeat calc(100% - 18px) center #fff; padding: 0 34px 0 15px; margin: 0; border: 1px solid #B0B0B0; border-radius: 3px; appearance: none; -webkit-appearance: none; -moz-appearance: none;}
+.select-button .btn-type1{ height: 44px; background-color:#0075FF; font-weight: 500; font-size: 14px; color: #fff; line-height: 16px; padding: 0 20px; margin-left: 12px; display: flex; align-items: center; flex: 1; justify-content: center; border-radius: 3px;}
+.select-button .btn-type1:disabled{ background-color: #CCD1D8;}
+
+#lp_layout .lp_wrap .lp_head{ width: 40px; height: 48px; position: absolute; top: 12px; left: 15px;}
+#lp_layout .lp_wrap .lp_head .logo{ width: 100%; height: 100%; background: url(../img/common/logo_lp.png) no-repeat center center; text-indent: -9999px;}
+#lp_layout .lp_wrap .btn{ display: flex; position: relative;}
+#lp_layout .lp_wrap .btn button{ height: 50px; font-weight: 500; font-size: 14px; color: #fff; line-height: 16px; display: flex; align-items: center; flex: 1; justify-content: center; border-radius: 3px;}
+#lp_layout .lp_wrap .btn button + button{ margin-left: 12px;}
+#lp_layout .lp_wrap .btn .btn-type1{ background-color:#0075FF;}
+#lp_layout .lp_wrap .btn .btn-type2{ width: 154px; background-color:#00A3FF;}
+#lp_layout .lp_wrap .btn .btn-type3{ width: 154px; background-color:#0075FF;}
+#lp_layout .lp_wrap .lp_close{ width: 30px; height: 30px; background: url(../img/ico/icon_popup_close.png) no-repeat center center; text-indent: -9999px; display: inline-block; position: absolute; top: 15px; right: 15px; z-index: 1;}
+#lp_layout .lp_wrap.lpMyService{ width: 600px; height: 392px; background-color: #161616; padding: 0; margin: -196px 0 0 -300px; flex-direction: column; align-items: center; justify-content: center; top: 50%; left: 50%;}
+#lp_layout .lp_wrap.lpMyService .tit h3{ font-weight: 300; font-size: 20px; color: #fff; text-align: center; line-height: 30px;}
+#lp_layout .lp_wrap.lpMyService .service{ margin: 30px 0 0 0;}
+#lp_layout .lp_wrap.lpMyService .service p{ width: 320px; height: 44px; background: url(../img/ico/icon_AI_blue_20.png) no-repeat 15px center #fff; font-weight: 400; font-size: 14px; color: #161616; line-height: 14px; padding: 0 0 0 39px; display: flex; align-items: center; border-radius: 3px;}
+#lp_layout .lp_wrap.lpMyService .btn{ margin-top: 34px;}
+#lp_layout .lp_wrap.lpServiceStop{ width: 540px; height: 309px; background-color: #161616; padding: 0; margin: -154px 0 0 -270px; flex-direction: column; align-items: center; justify-content: center; top: 50%; left: 50%;}
+#lp_layout .lp_wrap.lpServiceStop .tit h3{ font-weight: 300; font-size: 20px; color: #fff; text-align: center; line-height: 30px;}
+#lp_layout .lp_wrap.lpServiceStop .service{ margin: 30px 0 0 0;}
+#lp_layout .lp_wrap.lpServiceStop .service p{ width: 320px; height: 44px; background: url(../img/ico/icon_AI_blue_20.png) no-repeat 15px center #fff; font-weight: 400; font-size: 14px; color: #161616; line-height: 14px; padding: 0 0 0 39px; display: flex; align-items: center; border-radius: 3px;}
+#lp_layout .lp_wrap.lpServiceStop .btn{ margin-top: 34px;}
+
+.btn-box{ padding: 50px; display: flex; flex-wrap: wrap;}
+.btn-box .btn{ background-color: #e1e1e1; line-height: 30px; padding: 0 20px; display: inline-block; border: 1px solid #ddd; border-radius: 3px;}
+.btn-box .btn + .btn{ margin-left: 10px;}
+
+.tit-main-box{ background: url(../img/main/tit-logo.png) no-repeat left top; padding: 0 0 0 145px; margin: 60px 0 0 0; display: flex; flex-direction: column;}
+.tit-main-box .tit{ font-family: 'Volte'; font-size: 22px; color: #161616; line-height: 22px;}
+.tit-main-box .txt{ font-size: 14px; color: #161616; line-height: 24px; margin-top: 14px;}
+
+.service-box{ display: flex; flex: 1; align-items: center; justify-content: space-between;}
+.service-box .box{ width: 380px; display: flex; flex-direction: column; position: relative;}
+.service-box .box + .box::before{ width: 1px; height: 100%; background-color: #BAC9DB; content: ''; position: absolute; top: 0; left: -160px;}
+.service-box .tit{ background: url(../img/main/service-img.png) no-repeat center top; padding: 174px 0 0 0;}
+.service-box .tit h3{ font-weight: 500; font-size: 30px; color: #161616; line-height: 34px;}
+.service-box .select{ padding: 0 0 24px 0; margin: 26px 0 0 0; display: flex; flex-direction: column; position: relative;}
+.service-box .select .txt{ font-size: 14px; color: #161616; line-height: 14px;}
+.service-box .select .list{ height: 44px; background: url(../img/ico/icon_select_down.png) no-repeat calc(100% - 18px) center #fff; padding: 0 34px 0 15px; margin: 17px 0 0 0; border: 1px solid #B0B0B0; border-radius: 3px; appearance: none; -webkit-appearance: none; -moz-appearance: none;}
+.service-box .select .txt-info{ position: absolute; left: 0; bottom: 0;}
+.service-box .txt-info{ font-weight: 500; font-size: 12px; line-height: 12px;}
+.service-box .txt-info.ico-important{ background: url(../img/ico/icon_impor_red.png) no-repeat left top; color: #FF4054; padding: 0 0 0 16px;}
+.service-box .txt-info.ico-warning{ background: url(../img/ico/icon_warning_blue.png) no-repeat left 3px; color: #949494; line-height: 18px; padding: 0 0 0 16px;}
+.service-box .btn{ padding: 0 0 44px 0; margin: 25px 0 0 0; display: flex; position: relative;}
+.service-box .btn button{ height: 50px; font-weight: 500; font-size: 14px; color: #fff; line-height: 16px; display: flex; align-items: center; flex: 1; justify-content: center; border-radius: 3px;}
+.service-box .btn button:disabled{ background-color: #CCD1D8;}
+.service-box .btn button + button{ margin-left: 12px;}
+.service-box .btn .txt-info{ position: absolute; left: 0; bottom: 0;}
+.service-box .btn .btn-type1{ background-color:#0075FF;}
+.service-box .btn .btn-type2{ background-color:#161616;}
+
+.cont-box{ height: 100%; display: flex; flex-direction: column; position: relative;}
+.cont-box > .box-head{ position: relative;}
+.cont-box > .box-head .tit{ background: url(../img/ico/icon_AI_blue_26.png) no-repeat left 60px; font-weight: 400; font-size: 24px; color: #161616; line-height: 26px; padding: 60px 0 40px 32px; position: sticky; top: 150px;}
+.cont-box > .box-body{ flex: 1;}
+
+.board-box{ height: 100%; display: flex; flex-direction: column;}
+.board-box > .box-head{ padding-bottom: 30px;}
+.board-box > .box-head.flex-sb{ align-items: flex-end;}
+.board-box > .box-head .count{ height: 44px; font-weight: 400; font-size: 14px; color: #161616; line-height: 44px;}
+.board-box > .box-head .count span{ display: inline-block;}
+.board-box > .box-head .count + .util{ margin-left: 26px;}
+.board-box > .box-head .util{ padding: 2px 0; display: flex;}
+.board-box > .box-head .util li + li{ margin-left: 10px;}
+.board-box > .box-head .util .btn{ width: 40px; height: 40px; background: no-repeat center center #E3E3E3; text-indent: -9999px; display: inline-block; border-radius: 50%;}
+.board-box > .box-head .util .btn.ico-info{ background-image: url(../img/ico/icon_info.png);}
+.board-box > .box-head .util .btn.ico-filter{ background-image: url(../img/ico/icon_filter.png);}
+.board-box > .box-head .util .btn.ico-plus{ background-image: url(../img/ico/icon_plus.png);}
+.board-box > .box-head .util .btn.ico-del{ background-image: url(../img/ico/icon_del.png);}
+.board-box > .box-body{ flex: 1; position: relative;}
+
+.list-card{ padding-bottom: 100px;}
+.list-card ul{ display: flex; flex-wrap: wrap;}
+.list-card li{ width: 200px; height: 220px; background-color: #fff; padding: 35px 10px 10px 10px; border: 1px solid #b0b0b0; border-radius: 3px; overflow: hidden; position: relative;}
+.list-card li + li{ margin-left: 20px;}
+.list-card li:nth-child(5n+1){ margin-left: 0;}
+.list-card li:nth-child(n+6){ margin-top: 20px;}
+.list-card .chk{ width: 100%; height: 100%; position: absolute; top: 0; left: 0; cursor: pointer;}
+.list-card .chk input{ position: absolute; top: 0; left: -9999px;}
+.list-card .chk span{ width: 20px; height: 20px; background-color: #fff; text-indent: -9999px; display: inline-block; border: 1px solid #B0B0B0; border-radius: 3px; position: absolute; top: 10px; left: 10px;}
+.list-card .chk input:checked + span{ background: url(../img/ico/icon_chk.png) no-repeat center center #0075FF; border-color: #0075FF;}
+.list-card .txt{ font-weight: 400; font-size: 12px; color: #585858; line-height: 20px; letter-spacing: 0;}
+.list-card .btn-more{ width: 100%; margin: 50px 0 0 0; display: flex; justify-content: center;}
+.list-card .btn-more button{ width: 200px; height: 50px; background-color: #CCD1D8; font-weight: 400; font-size: 14px; color: #fff; line-height: 15px; display: flex; align-items: center; justify-content: center; border-radius: 3px;}
+
+.cont-head{ width: 100%; background-color: #F3F3F4; padding: 60px 0 30px 0; display: flex; flex-direction: column; position: sticky; top: 150px; left: 0; z-index: 9;}
+.cont-head .tit{ background: url(../img/ico/icon_AI_blue_26.png) no-repeat left top; font-weight: 400; font-size: 24px; color: #161616; line-height: 26px; padding: 0 0 40px 32px; position: sticky; top: 150px;}
+.cont-head .count{ height: 44px; font-weight: 400; font-size: 14px; color: #161616; line-height: 44px;}
+.cont-head .count span{ display: inline-block;}
+.cont-head .count + .util{ margin-left: 26px;}
+.cont-head .util{ padding: 2px 0; display: flex;}
+.cont-head .util li + li{ margin-left: 10px;}
+.cont-head .util .btn{ width: 40px; height: 40px; background: no-repeat center center #E3E3E3; text-indent: -9999px; display: inline-block; border-radius: 50%;}
+.cont-head .util .btn.ico-info{ background-image: url(../img/ico/icon_info.png);}
+.cont-head .util .btn.ico-filter{ background-image: url(../img/ico/icon_filter.png);}
+.cont-head .util .btn.ico-plus{ background-image: url(../img/ico/icon_plus.png);}
+.cont-head .util .btn.ico-del{ background-image: url(../img/ico/icon_del.png);}

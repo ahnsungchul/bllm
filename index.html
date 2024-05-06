@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><!-- IE에서만 -->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>BLLM PUBLISHING</title>
+    <style>
+        body{ padding: 10px;}
+        .progress p{ font-size: 20px; margin: 0 0 10px 0; display: inline-block;}
+        .progress p + p{ margin-left: 50px;}
+        table{ width: 100%; border: 1px solid #222; border-bottom: 0; border-right: 0; border-collapse: separate; border-spacing: 0;}
+        table th{ height: 22px; background-color: #444; font-weight: 400; font-size: 14px; color: #fff; border-right: 1px solid #222; border-bottom: 1px solid #222;}
+        table tbody tr:hover td{ background-color: #e7f8ff;}
+        table td{ height: 26px; font-size: 14px; color: #222; padding: 0 10px; border-right: 1px solid #222; border-bottom: 1px solid #222;}
+        table td:nth-child(1),
+        table td:nth-child(6){ text-align: center;}
+        table td a{ position: relative;}
+        table td a::after{ width: 6px; height: 6px; content: ""; margin: 0px 0 2px 4px; display: inline-block; border-right: 2px solid #222; border-bottom: 2px solid #222; transform: rotate(-45deg);}
+        table tbody tr:hover td.ok,
+        table td.ok{ background-color: blue;}
+        table td.ok a{ text-decoration: none; color: #fff;}
+        table td.ok a:after{ border-color: #fff;}
+        table tr.cLine td{ text-decoration: line-through; color: red;}
+        table .id-none:hover td,
+        table .id-none td{ background-color: #eaeaea; color: #999;}
+        table tbody tr:hover td.id-overlap2,
+        table td.id-overlap2{ background-color: red; color: #fff;}
+        table tbody tr:hover td.id-overlap,
+        table td.id-overlap{ background-color: rgb(216, 0, 0); color: #fff;}
+        table .template td{ background-color: #bffaae;}
+        .txt_red{ color: red;}
+    </style>
+    </head>
+<body>
+    <table id="list" class="test">
+        <colgroup>
+            <col style="width: 60px;" />
+            <col style="width: auto;" />
+            <col style="width: auto;" />
+            <col style="width: auto;" />
+            <col style="width: auto;" />
+            <col style="width: auto;" />
+            <col style="width: 200px;" />
+            <col style="width: 260px;" />
+            <col style="width: auto;" />
+        </colgroup>
+        <thead>
+            <tr>
+                <th scope="col" rowspan="2">번호</th>
+                <th scope="col" colspan="5">구조</th>
+                <th scope="col" rowspan="2">ID</th>
+                <th scope="col" rowspan="2">VIEW</th>
+                <th scope="col" rowspan="2">기타</th>
+            </tr>
+            <tr>
+                <th scope="col">1Depth</th>
+                <th scope="col">2Depth</th>
+                <th scope="col">3Depth</th>
+                <th scope="col">4Depth</th>
+                <th scope="col">5Depth</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="no"></td>
+                <td>로그인</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="id">sllm_poc_login_01</td>
+                <td class="link"></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="no"></td>
+                <td>메인</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="id">sllm_poc_main_01</td>
+                <td class="link"></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="no"></td>
+                <td></td>
+                <td>실행하기(Layer Popup)</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="id">layer_popup</td>
+                <td class="link"></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="no"></td>
+                <td>데이터셋 선택</td>
+                <td>데이터셋 준비</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="id">sllm_poc_dataset_01</td>
+                <td class="link"></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="no"></td>
+                <td></td>
+                <td></td>
+                <td>중단하기(Layer Popup)</td>
+                <td></td>
+                <td></td>
+                <td class="id">layer_popup</td>
+                <td class="link"></td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script type="text/javascript">
+        // const list = {
+        //     id : function(){
+        //         const table = document.querySelector("#list tbody");
+        //         const trAll = table.querySelectorAll("tr");
+        //         trAll.forEach(function(tr,index){
+        //             const no = tr.querySelector(".no");
+        //             no.innerHTML = index+1;
+        //         });
+        //     }
+        // }
+        // list.id();
+
+        const list = {
+            id : function(){
+                const table = document.querySelector("#list tbody");
+                const trAll = table.querySelectorAll("tr");
+                trAll.forEach(function(tr,index){
+                    const no = tr.querySelector(".no");
+                    const _link = tr.querySelector(".link");
+                    const _id = tr.querySelector(".id").innerHTML;
+                    no.innerHTML = index+1;
+                    _link.innerHTML = "<a href='html/"+_id+".html' target='_blank'>"+_id+".html</a>";
+                });
+            }
+        }
+        list.id();
+    </script>
+</body>
+</html>
