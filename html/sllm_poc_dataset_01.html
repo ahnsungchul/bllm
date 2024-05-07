@@ -76,8 +76,10 @@
                     <div class="flex-sb">
                         <div class="sb-left">
                             <div class="select-button">
-                                <select style="width: 330px;">
-                                    <option>dataset_국민카드_고객센터</option>
+                                <select style="width: 330px;" onchange="datasetSelect(this)">
+                                    <option value="0">dataset_국민카드_고객센터</option>
+                                    <option value="1">dataset_자동차_법규_교통상식</option>
+                                    <option value="2">dataset_군사용어_시사</option>
                                 </select>
                                 <button type="button" class="btn-type1">데이터셋 선택 완료</button>
                             </div>
@@ -105,7 +107,8 @@
                     </div>
                 </div>
             </div>
-            <div class="list-card">
+            <!--dataset_국민카드_고객센터-->
+            <div class="list-card" data-dataset="0">
                 <div class="layout">
                     <ul>
                         <li class="item">
@@ -113,577 +116,1559 @@
                                 <input type="checkbox" />
                                 <span>선택</span>
                             </label>
-                            <p class="data"> {
-                                "instruction": "국민행복카드 
-                            발급 후 바우처 신청을 해야 하나요?",
-                                "input": "",
-                                "output": "국민행복카드 발급은 
-                            바우처 사업의 신청과는 별개입니다.
-                            바우처 사업에 지원대상이 맞는지 
-                            확인 후 바우처 신청 경로로 
-                            신청하셔야 합니다.>>국민행복카드 발급은 
-                            바우처 사업의 신청과는 별개입니다.
-                            바우처 사업에 지원대상이 맞는지 
-                            확인 후 바우처 신청 경로로 
-                            신청하셔야 합니다.>>국민행복카드 </p>
+                            <p class="data"> 
+                                {<br>
+                                    <span class="space"></span>"instruction": "국민행복카드 <br>
+                                발급 후 바우처 신청을 해야 하나요?",<br>
+                                <span class="space"></span>"input": "",<br>
+                                <span class="space"></span>"output": "국민행복카드 발급은 <br>
+                                바우처 사업의 신청과는 별개입니다.<br>
+                                바우처 사업에 지원대상이 맞는지 <br>
+                                확인 후 바우처 신청 경로로 <br>
+                                신청하셔야 합니다.>>국민행복카드 
+                            </p>
                         </li>
                         <li class="item">
                             <label class="chk">
                                 <input type="checkbox" />
                                 <span>선택</span>
                             </label>
-                            <p class="data"> {
-                                "instruction": "국민행복카드 
-                            발급 후 바우처 신청을 해야 하나요?",
-                                "input": "",
-                                "output": "국민행복카드 발급은 
-                            바우처 사업의 신청과는 별개입니다.
-                            바우처 사업에 지원대상이 맞는지 
-                            확인 후 바우처 신청 경로로 
-                            신청하셔야 합니다.>>국민행복카드 발급은 
-                            바우처 사업의 신청과는 별개입니다.
-                            바우처 사업에 지원대상이 맞는지 
-                            확인 후 바우처 신청 경로로 
-                            신청하셔야 합니다.>>국민행복카드 </p>
+                            <p class="data">
+                            {<br>
+                                <span class="space"></span>"instruction": "인터넷을 통한 <br>
+                            카드발급은 어떻게 하나요?",<br>
+                            <span class="space"></span>"input": "",<br>
+                            <span class="space"></span>"output": "- 신청 방법▷ <br>
+                            KB국민카드 홈페이지에서 <br>
+                            발급하고자 하는 카드를 조회한 후에 <br>
+                            해당카드의 [카드신청하기] 버튼을 <br>
+                            클릭하신 후 카드신청하시면 됩니다. 
+                            </p>
                         </li>
                         <li class="item">
                             <label class="chk">
                                 <input type="checkbox" />
                                 <span>선택</span>
                             </label>
-                            <p class="data"> {
-                                "instruction": "국민행복카드 
-                            발급 후 바우처 신청을 해야 하나요?",
-                                "input": "",
-                                "output": "국민행복카드 발급은 
-                            바우처 사업의 신청과는 별개입니다.
-                            바우처 사업에 지원대상이 맞는지 
-                            확인 후 바우처 신청 경로로 
-                            신청하셔야 합니다.>>국민행복카드 발급은 
-                            바우처 사업의 신청과는 별개입니다.
-                            바우처 사업에 지원대상이 맞는지 
-                            확인 후 바우처 신청 경로로 
-                            신청하셔야 합니다.>>국민행복카드 </p>
+                            <p class="data">
+                                {<br>
+                                    <span class="space"></span>"instruction": "카드를 발급<br>
+                                받으려면 어떻게 해야 하나요?",<br>
+                                <span class="space"></span>"input": "",<br>
+                                <span class="space"></span>"output": "- 신용카드 결제능력이 <br>
+                                있고 만 19세 이상으로서 신용정보 <br>
+                                조회결과 신용상태가 양호하며 <br>
+                                KB국민카드에서 정한 일정 기준에 <br>
+                                해당하시는 고객은 발급이 가능합니
+                            </p>
                         </li>
                         <li class="item">
                             <label class="chk">
                                 <input type="checkbox" />
                                 <span>선택</span>
                             </label>
-                            <p class="data"> {
-                                "instruction": "국민행복카드 
-                            발급 후 바우처 신청을 해야 하나요?",
-                                "input": "",
-                                "output": "국민행복카드 발급은 
-                            바우처 사업의 신청과는 별개입니다.
-                            바우처 사업에 지원대상이 맞는지 
-                            확인 후 바우처 신청 경로로 
-                            신청하셔야 합니다.>>국민행복카드 발급은 
-                            바우처 사업의 신청과는 별개입니다.
-                            바우처 사업에 지원대상이 맞는지 
-                            확인 후 바우처 신청 경로로 
-                            신청하셔야 합니다.>>국민행복카드 </p>
+                            <p class="data">
+                                {<br>
+                                    <span class="space"></span>"instruction": "카드번호 보기<br>
+                                (카드번호 조회)는 어디에서 조회할 <br>
+                                수 있나요?",<br>
+                                <span class="space"></span>"input": "",<br>
+                                <span class="space"></span>"output": "KB국민카드 <br>
+                                홈페이지[My KB > 정보관리 > <br>
+                                소유카드관리]에서 확인 가능하며, <br>
+                                KB Pay[KB Pay \n> 결제 > 
+                            </p>
                         </li>
                         <li class="item">
                             <label class="chk">
                                 <input type="checkbox" />
                                 <span>선택</span>
                             </label>
-                            <p class="data"> {
-                                "instruction": "국민행복카드 
-                            발급 후 바우처 신청을 해야 하나요?",
-                                "input": "",
-                                "output": "국민행복카드 발급은 
-                            바우처 사업의 신청과는 별개입니다.
-                            바우처 사업에 지원대상이 맞는지 
-                            확인 후 바우처 신청 경로로 
-                            신청하셔야 합니다.>>국민행복카드 발급은 
-                            바우처 사업의 신청과는 별개입니다.
-                            바우처 사업에 지원대상이 맞는지 
-                            확인 후 바우처 신청 경로로 
-                            신청하셔야 합니다.>>국민행복카드 </p>
+                            <p class="data">
+                                {<br>
+                                    <span class="space"></span>"instruction": "KB국민 <br>
+                                비씨카드는 어떤 상품인가요?",<br>
+                                <span class="space"></span>"input": "",<br>
+                                <span class="space"></span>"output": "KB국민 비씨카드는 <br>
+                                비씨카드 주식회사와의 <br>
+                                업무위임계약에 따라 카드이용관련 <br>
+                                서비스가 비씨카드사를 통해 제공되는 <br>
+                                카드 입니다.(카드사 앞 또는 뒷면에 
+                            </p>
                         </li>
                         <li class="item">
                             <label class="chk">
                                 <input type="checkbox" />
                                 <span>선택</span>
                             </label>
-                            <p class="data"> {
-                                "instruction": "국민행복카드 
-                            발급 후 바우처 신청을 해야 하나요?",
-                                "input": "",
-                                "output": "국민행복카드 발급은 
-                            바우처 사업의 신청과는 별개입니다.
-                            바우처 사업에 지원대상이 맞는지 
-                            확인 후 바우처 신청 경로로 
-                            신청하셔야 합니다.>>국민행복카드 발급은 
-                            바우처 사업의 신청과는 별개입니다.
-                            바우처 사업에 지원대상이 맞는지 
-                            확인 후 바우처 신청 경로로 
-                            신청하셔야 합니다.>>국민행복카드 </p>
+                            <p class="data">
+                                {<br>
+                                    <span class="space"></span>"instruction": "삼성증권 CMA <br>
+                                KB국민 체크카드 발급신청은 <br>
+                                어디에서 하나요?",<br>
+                                <span class="space"></span>"input": "",<br>
+                                <span class="space"></span>"output": "결제계좌가 삼성증권 <br>
+                                CMA 계좌만 등록 가능한 상품으로 <br>
+                                삼성증권 영업점에서만 발급 <br>
+                                가능합니다. ※ 해당 상품은 2017.12
+                            </p>
                         </li>
                         <li class="item">
                             <label class="chk">
                                 <input type="checkbox" />
                                 <span>선택</span>
                             </label>
-                            <p class="data"> {
-                                "instruction": "국민행복카드 
-                            발급 후 바우처 신청을 해야 하나요?",
-                                "input": "",
-                                "output": "국민행복카드 발급은 
-                            바우처 사업의 신청과는 별개입니다.
-                            바우처 사업에 지원대상이 맞는지 
-                            확인 후 바우처 신청 경로로 
-                            신청하셔야 합니다.>>국민행복카드 발급은 
-                            바우처 사업의 신청과는 별개입니다.
-                            바우처 사업에 지원대상이 맞는지 
-                            확인 후 바우처 신청 경로로 
-                            신청하셔야 합니다.>>국민행복카드 </p>
+                            <p class="data">
+                                {<br>
+                                    <span class="space"></span>"instruction": "신용카드의 <br>
+                                유효기간이 만료가 되면 갱신발급이 <br>
+                                되나요?",<br>
+                                <span class="space"></span>"input": "",<br>
+                                <span class="space"></span>"output": "신용카드의 <br>
+                                자동갱신발급이란 유효기간 <br>
+                                만료이전에 회원의 카드이용상의 <br>
+                                편의를 위해 유효기간이 갱신된 
+                            </p>
                         </li>
                         <li class="item">
                             <label class="chk">
                                 <input type="checkbox" />
                                 <span>선택</span>
                             </label>
-                            <p class="data"> {
-                                "instruction": "국민행복카드 
-                            발급 후 바우처 신청을 해야 하나요?",
-                                "input": "",
-                                "output": "국민행복카드 발급은 
-                            바우처 사업의 신청과는 별개입니다.
-                            바우처 사업에 지원대상이 맞는지 
-                            확인 후 바우처 신청 경로로 
-                            신청하셔야 합니다.>>국민행복카드 발급은 
-                            바우처 사업의 신청과는 별개입니다.
-                            바우처 사업에 지원대상이 맞는지 
-                            확인 후 바우처 신청 경로로 
-                            신청하셔야 합니다.>>국민행복카드 </p>
+                            <p class="data">
+                                {<br>
+                                    <span class="space"></span>"instruction": "신용카드를 <br>
+                                발급받으려면 어떻게 해야 하나요?",<br>
+                                <span class="space"></span>"input": "",<br>
+                                <span class="space"></span>"output": "신용카드 결제능력이 <br>
+                                있고 만 19세 이상으로서 신용정보 <br>
+                                조회결과 신용상태가 양호하며 <br>
+                                당사에서 정한 일정 기준에 <br>
+                                해당하시는 고객님은 발급이 
+                            </p>
                         </li>
                         <li class="item">
                             <label class="chk">
                                 <input type="checkbox" />
                                 <span>선택</span>
                             </label>
-                            <p class="data"> {
-                                "instruction": "국민행복카드 
-                            발급 후 바우처 신청을 해야 하나요?",
-                                "input": "",
-                                "output": "국민행복카드 발급은 
-                            바우처 사업의 신청과는 별개입니다.
-                            바우처 사업에 지원대상이 맞는지 
-                            확인 후 바우처 신청 경로로 
-                            신청하셔야 합니다.>>국민행복카드 발급은 
-                            바우처 사업의 신청과는 별개입니다.
-                            바우처 사업에 지원대상이 맞는지 
-                            확인 후 바우처 신청 경로로 
-                            신청하셔야 합니다.>>국민행복카드 </p>
+                            <p class="data">
+                                {<br>
+                                    <span class="space"></span>"instruction": "도난분실 신고 <br>
+                                했는데 재발급은 어떻게 <br>
+                                신청하나요?",<br>
+                                <span class="space"></span>"input": "",<br>
+                                <span class="space"></span>"output": "도난분실신고시 즉시 <br>
+                                재발급신청이 가능하며, 도난분실신고 <br>
+                                이후에도 KB Pay, 홈페이지,<br>
+                                고객센터 또는 영업점을 통해 카드 
+                            </p>
                         </li>
                         <li class="item">
                             <label class="chk">
                                 <input type="checkbox" />
                                 <span>선택</span>
                             </label>
-                            <p class="data"> {
-                                "instruction": "국민행복카드 
-                            발급 후 바우처 신청을 해야 하나요?",
-                                "input": "",
-                                "output": "국민행복카드 발급은 
-                            바우처 사업의 신청과는 별개입니다.
-                            바우처 사업에 지원대상이 맞는지 
-                            확인 후 바우처 신청 경로로 
-                            신청하셔야 합니다.>>국민행복카드 발급은 
-                            바우처 사업의 신청과는 별개입니다.
-                            바우처 사업에 지원대상이 맞는지 
-                            확인 후 바우처 신청 경로로 
-                            신청하셔야 합니다.>>국민행복카드 </p>
+                            <p class="data">
+                                {<br>
+                                    <span class="space"></span>"instruction": "가족 카드를 <br>
+                                발급받고 싶습니다. 어떻게 해야 <br>
+                                하나요?",<br>
+                                <span class="space"></span>"input": "",<br>
+                                <span class="space"></span>"output": "- 가족회원의 경우에는 <br>
+                                본인회원의 직계혈족(만18세 이상), <br>
+                                형제자매(만19세 이상), 배우자, <br>
+                                배우자의 부모, 자녀와 손자의 배우자
+                            </p>
                         </li>
                         <li class="item">
                             <label class="chk">
                                 <input type="checkbox" />
                                 <span>선택</span>
                             </label>
-                            <p class="data"> {
-                                "instruction": "국민행복카드 
-                            발급 후 바우처 신청을 해야 하나요?",
-                                "input": "",
-                                "output": "국민행복카드 발급은 
-                            바우처 사업의 신청과는 별개입니다.
-                            바우처 사업에 지원대상이 맞는지 
-                            확인 후 바우처 신청 경로로 
-                            신청하셔야 합니다.>>국민행복카드 발급은 
-                            바우처 사업의 신청과는 별개입니다.
-                            바우처 사업에 지원대상이 맞는지 
-                            확인 후 바우처 신청 경로로 
-                            신청하셔야 합니다.>>국민행복카드 </p>
+                            <p class="data">
+                                {<br>
+                                    <span class="space"></span>"instruction": "이용대금 <br>
+                                이의제기 신청은 어떻게 하나요?",<br>
+                                <span class="space"></span>"input": "",<br>
+                                <span class="space"></span>"output": "KB 국민카드 <br>
+                                홈페이지, KB Pay, 고객센터, <br>
+                                영업점에서 접수 가능하며 접수 <br>
+                                방법은 아래와 같습니다.<br>
+                                ① KB국민카드 홈페이지 : 고객센터 
+                            </p>
                         </li>
                         <li class="item">
                             <label class="chk">
                                 <input type="checkbox" />
                                 <span>선택</span>
                             </label>
-                            <p class="data"> {
-                                "instruction": "국민행복카드 
-                            발급 후 바우처 신청을 해야 하나요?",
-                                "input": "",
-                                "output": "국민행복카드 발급은 
-                            바우처 사업의 신청과는 별개입니다.
-                            바우처 사업에 지원대상이 맞는지 
-                            확인 후 바우처 신청 경로로 
-                            신청하셔야 합니다.>>국민행복카드 발급은 
-                            바우처 사업의 신청과는 별개입니다.
-                            바우처 사업에 지원대상이 맞는지 
-                            확인 후 바우처 신청 경로로 
-                            신청하셔야 합니다.>>국민행복카드 </p>
+                            <p class="data">
+                                {<br>
+                                    <span class="space"></span>"instruction": "철회·항변은 <br>
+                                어떻게 신청하나요?",<br>
+                                <span class="space"></span>"input": "",<br>
+                                <span class="space"></span>"output": "[철회권]- 20만원 <br>
+                                이상 3개월 이상의 할부거래로 <br>
+                                거래(승인)일로부터 7일 이내 <br>
+                                신청하셔야 합니다.- 거래일로부터 <br>
+                                7일 이내에 우체국에서 당사와 해당
+                            </p>
                         </li>
                         <li class="item">
                             <label class="chk">
                                 <input type="checkbox" />
                                 <span>선택</span>
                             </label>
-                            <p class="data"> {
-                                "instruction": "국민행복카드 
-                            발급 후 바우처 신청을 해야 하나요?",
-                                "input": "",
-                                "output": "국민행복카드 발급은 
-                            바우처 사업의 신청과는 별개입니다.
-                            바우처 사업에 지원대상이 맞는지 
-                            확인 후 바우처 신청 경로로 
-                            신청하셔야 합니다.>>국민행복카드 발급은 
-                            바우처 사업의 신청과는 별개입니다.
-                            바우처 사업에 지원대상이 맞는지 
-                            확인 후 바우처 신청 경로로 
-                            신청하셔야 합니다.>>국민행복카드 </p>
+                            <p class="data">
+                                {<br>
+                                    <span class="space"></span>"instruction": "내용증명은 <br>
+                                어떻게 작성하나요?",<br>
+                                <span class="space"></span>"input": "",<br>
+                                <span class="space"></span>"output": "내용증명은 <br>
+                                일반적으로 A4지에 육하원칙에 <br>
+                                의거하여 취소를 요청하시는 사유나 <br>
+                                가맹점의 계약 불이행 내용을 <br>
+                                기재합니다. 또한 서두 또는 말미에 
+                            </p>
                         </li>
                         <li class="item">
                             <label class="chk">
                                 <input type="checkbox" />
                                 <span>선택</span>
                             </label>
-                            <p class="data"> {
-                                "instruction": "국민행복카드 
-                            발급 후 바우처 신청을 해야 하나요?",
-                                "input": "",
-                                "output": "국민행복카드 발급은 
-                            바우처 사업의 신청과는 별개입니다.
-                            바우처 사업에 지원대상이 맞는지 
-                            확인 후 바우처 신청 경로로 
-                            신청하셔야 합니다.>>국민행복카드 발급은 
-                            바우처 사업의 신청과는 별개입니다.
-                            바우처 사업에 지원대상이 맞는지 
-                            확인 후 바우처 신청 경로로 
-                            신청하셔야 합니다.>>국민행복카드 </p>
+                            <p class="data">
+                                {<br>
+                                    <span class="space"></span>"instruction": "매출취소를 <br>
+                                했는데 환불은 언제되나요?",<br>
+                                <span class="space"></span>"input": "",<br>
+                                <span class="space"></span>"output": "이용하신 가맹점을 <br>
+                                통해 취소 요청하신 경우 해당 <br>
+                                가맹점에서 당사로 취소반영 <br>
+                                되기까지는 약 3~5 영업일 정도 <br>
+                                시간이 소요됩니다.취소 반영 시
+                            </p>
                         </li>
                         <li class="item">
                             <label class="chk">
                                 <input type="checkbox" />
                                 <span>선택</span>
                             </label>
-                            <p class="data"> {
-                                "instruction": "국민행복카드 
-                            발급 후 바우처 신청을 해야 하나요?",
-                                "input": "",
-                                "output": "국민행복카드 발급은 
-                            바우처 사업의 신청과는 별개입니다.
-                            바우처 사업에 지원대상이 맞는지 
-                            확인 후 바우처 신청 경로로 
-                            신청하셔야 합니다.>>국민행복카드 발급은 
-                            바우처 사업의 신청과는 별개입니다.
-                            바우처 사업에 지원대상이 맞는지 
-                            확인 후 바우처 신청 경로로 
-                            신청하셔야 합니다.>>국민행복카드 </p>
+                            <p class="data">
+                                {<br>
+                                    <span class="space"></span>"instruction": "포인트로 <br>
+                                결제한 후 취소하면 포인트리가 다시 <br>
+                                생성이 되나요?",<br>
+                                <span class="space"></span>"input": "",<br>
+                                <span class="space"></span>"output": "※ 포인트리로 결제한<br> 
+                                전표가 당사에 매입되기 전에 취소한 <br>
+                                경우- 고객님께서 포인트리 <br>
+                                스타샵(적립)가맹점에서 포인트를 
+                            </p>
                         </li>
                         <li class="item">
                             <label class="chk">
                                 <input type="checkbox" />
                                 <span>선택</span>
                             </label>
-                            <p class="data"> {
-                                "instruction": "국민행복카드 
-                            발급 후 바우처 신청을 해야 하나요?",
-                                "input": "",
-                                "output": "국민행복카드 발급은 
-                            바우처 사업의 신청과는 별개입니다.
-                            바우처 사업에 지원대상이 맞는지 
-                            확인 후 바우처 신청 경로로 
-                            신청하셔야 합니다.>>국민행복카드 발급은 
-                            바우처 사업의 신청과는 별개입니다.
-                            바우처 사업에 지원대상이 맞는지 
-                            확인 후 바우처 신청 경로로 
-                            신청하셔야 합니다.>>국민행복카드 </p>
+                            <p class="data">
+                                {<br>
+                                    <span class="space"></span>"instruction": "연회비의 <br>
+                                종류에는 어떤 것이 있나요?",<br>
+                                <span class="space"></span>"input": "",<br>
+                                <span class="space"></span>"output": "신용카드의 연회비는 <br>
+                                크게 기본연회비(회원별/카드별), <br>
+                                제휴연회비(상품연회비, 맞춤연회비)<br>
+                                로 구성되어 있습니다. 기본연회비는 <br>
+                                회원관리비용(발급, 교부, 
+                            </p>
                         </li>
                         <li class="item">
                             <label class="chk">
                                 <input type="checkbox" />
                                 <span>선택</span>
                             </label>
-                            <p class="data"> {
-                                "instruction": "국민행복카드 
-                            발급 후 바우처 신청을 해야 하나요?",
-                                "input": "",
-                                "output": "국민행복카드 발급은 
-                            바우처 사업의 신청과는 별개입니다.
-                            바우처 사업에 지원대상이 맞는지 
-                            확인 후 바우처 신청 경로로 
-                            신청하셔야 합니다.>>국민행복카드 발급은 
-                            바우처 사업의 신청과는 별개입니다.
-                            바우처 사업에 지원대상이 맞는지 
-                            확인 후 바우처 신청 경로로 
-                            신청하셔야 합니다.>>국민행복카드 </p>
+                            <p class="data">
+                                {<br>
+                                    <span class="space"></span>"instruction": "가족회원도 <br>
+                                별도의 연회비가 있나요?",<br>
+                                <span class="space"></span>"input": "",<br>
+                                <span class="space"></span>"output": "일부의 카드 상품에 <br>
+                                대해 가족 연회비가 추가로 <br>
+                                발생합니다. HERITAGE Exclusive, <br>
+                                HERITAGE Reserve(포인트형/<br>
+                                마일리지형), TANTUM, 미르, 
+                            </p>
                         </li>
                         <li class="item">
                             <label class="chk">
                                 <input type="checkbox" />
                                 <span>선택</span>
                             </label>
-                            <p class="data"> {
-                                "instruction": "국민행복카드 
-                            발급 후 바우처 신청을 해야 하나요?",
-                                "input": "",
-                                "output": "국민행복카드 발급은 
-                            바우처 사업의 신청과는 별개입니다.
-                            바우처 사업에 지원대상이 맞는지 
-                            확인 후 바우처 신청 경로로 
-                            신청하셔야 합니다.>>국민행복카드 발급은 
-                            바우처 사업의 신청과는 별개입니다.
-                            바우처 사업에 지원대상이 맞는지 
-                            확인 후 바우처 신청 경로로 
-                            신청하셔야 합니다.>>국민행복카드 </p>
+                            <p class="data">
+                                {<br>
+                                    <span class="space"></span>"instruction": "제휴카드를 교체 <br>
+                                또는 추가 발급하는 경우 <br>
+                                제휴연회비는 언제 청구되나요?",<br>
+                                <span class="space"></span>"input": "",<br>
+                                <span class="space"></span>"output": "제휴연회비가 <br>
+                                존재하는 제휴카드로 교체 또는 <br>
+                                추가발급하는 경우, 최초년도 <br>
+                                제휴연회비는 이용실적 여부와
+                            </p>
                         </li>
                         <li class="item">
                             <label class="chk">
                                 <input type="checkbox" />
                                 <span>선택</span>
                             </label>
-                            <p class="data"> {
-                                "instruction": "국민행복카드 
-                            발급 후 바우처 신청을 해야 하나요?",
-                                "input": "",
-                                "output": "국민행복카드 발급은 
-                            바우처 사업의 신청과는 별개입니다.
-                            바우처 사업에 지원대상이 맞는지 
-                            확인 후 바우처 신청 경로로 
-                            신청하셔야 합니다.>>국민행복카드 발급은 
-                            바우처 사업의 신청과는 별개입니다.
-                            바우처 사업에 지원대상이 맞는지 
-                            확인 후 바우처 신청 경로로 
-                            신청하셔야 합니다.>>국민행복카드 </p>
+                            <p class="data">
+                                {<br>
+                                    <span class="space"></span>"instruction": "연회비 약정월 <br>
+                                및 약정기간이 무엇인가요?",<br>
+                                <span class="space"></span>"input": "",<br>
+                                <span class="space"></span>"output": "- 회원별 기본연회비는 <br>
+                                첫 신용카드 발급월을, 카드별 <br>
+                                기본연회비와 제휴연회비는 해당 <br>
+                                카드 발급월을 연회비 약정월로 <br>
+                                하며, 연회비 약정기간은 연회비 
+                            </p>
                         </li>
                         <li class="item">
                             <label class="chk">
                                 <input type="checkbox" />
                                 <span>선택</span>
                             </label>
-                            <p class="data"> {
-                                "instruction": "국민행복카드 
-                            발급 후 바우처 신청을 해야 하나요?",
-                                "input": "",
-                                "output": "국민행복카드 발급은 
-                            바우처 사업의 신청과는 별개입니다.
-                            바우처 사업에 지원대상이 맞는지 
-                            확인 후 바우처 신청 경로로 
-                            신청하셔야 합니다.>>국민행복카드 발급은 
-                            바우처 사업의 신청과는 별개입니다.
-                            바우처 사업에 지원대상이 맞는지 
-                            확인 후 바우처 신청 경로로 
-                            신청하셔야 합니다.>>국민행복카드 </p>
+                            <p class="data">
+                                {<br>
+                                    <span class="space"></span>"instruction": "이용실적 없이 <br>
+                                카드를 탈회하는 경우 연회비 환급이 <br>
+                                가능한가요?",<br>
+                                <span class="space"></span>"input": "",<br>
+                                <span class="space"></span>"output": "유효기간 도래전 <br>
+                                카드를 해지하는 경우 약정기간이 <br>
+                                남아있는 정상납부된 연회비에 대해 <br>
+                                카드의 발행/배송 등 \n카드발급
+                            </p>
                         </li>
                         <li class="item">
                             <label class="chk">
                                 <input type="checkbox" />
                                 <span>선택</span>
                             </label>
-                            <p class="data"> {
-                                "instruction": "국민행복카드 
-                            발급 후 바우처 신청을 해야 하나요?",
-                                "input": "",
-                                "output": "국민행복카드 발급은 
-                            바우처 사업의 신청과는 별개입니다.
-                            바우처 사업에 지원대상이 맞는지 
-                            확인 후 바우처 신청 경로로 
-                            신청하셔야 합니다.>>국민행복카드 발급은 
-                            바우처 사업의 신청과는 별개입니다.
-                            바우처 사업에 지원대상이 맞는지 
-                            확인 후 바우처 신청 경로로 
-                            신청하셔야 합니다.>>국민행복카드 </p>
+                            <p class="data">
+                                {<br>
+                                    <span class="space"></span>"instruction": "KB국민카드 중 <br>
+                                연회비가 면제되는 카드가 있나요?",<br>
+                                <span class="space"></span>"input": "",<br>
+                                <span class="space"></span>"output": "신용카드의 연회비는 <br>
+                                카드 상품별로 연회비 면제 조건이 <br>
+                                다르며, 카드상품별 연간 이용실적에 <br>
+                                따라 차기년도부터 연회비가 <br>
+                                면제되는 카드 상품이 있습니다.
+                            </p>
                         </li>
                         <li class="item">
                             <label class="chk">
                                 <input type="checkbox" />
                                 <span>선택</span>
                             </label>
-                            <p class="data"> {
-                                "instruction": "국민행복카드 
-                            발급 후 바우처 신청을 해야 하나요?",
-                                "input": "",
-                                "output": "국민행복카드 발급은 
-                            바우처 사업의 신청과는 별개입니다.
-                            바우처 사업에 지원대상이 맞는지 
-                            확인 후 바우처 신청 경로로 
-                            신청하셔야 합니다.>>국민행복카드 발급은 
-                            바우처 사업의 신청과는 별개입니다.
-                            바우처 사업에 지원대상이 맞는지 
-                            확인 후 바우처 신청 경로로 
-                            신청하셔야 합니다.>>국민행복카드 </p>
+                            <p class="data">
+                                {<br>
+                                    <span class="space"></span>"instruction": "카드를 두개 이상 <br>
+                                보유 했을때 연회비는 어떻게 <br>
+                                청구되나요?",<br>
+                                <span class="space"></span>"input": "",<br>
+                                <span class="space"></span>"output": "개인회원에게 <br>
+                                청구되는 연회비는 기본연회비<br>
+                                (회원별/카드별)와 제휴연회비로 <br>
+                                구분됩니다. - 회원별로 청구되는 
+                            </p>
                         </li>
                         <li class="item">
                             <label class="chk">
                                 <input type="checkbox" />
                                 <span>선택</span>
                             </label>
-                            <p class="data"> {
-                                "instruction": "국민행복카드 
-                            발급 후 바우처 신청을 해야 하나요?",
-                                "input": "",
-                                "output": "국민행복카드 발급은 
-                            바우처 사업의 신청과는 별개입니다.
-                            바우처 사업에 지원대상이 맞는지 
-                            확인 후 바우처 신청 경로로 
-                            신청하셔야 합니다.>>국민행복카드 발급은 
-                            바우처 사업의 신청과는 별개입니다.
-                            바우처 사업에 지원대상이 맞는지 
-                            확인 후 바우처 신청 경로로 
-                            신청하셔야 합니다.>>국민행복카드 </p>
+                            <p class="data">
+                                {<br>
+                                    <span class="space"></span>"instruction": "카드발급신청을 <br>
+                                했는데 언제쯤 수령이 가능할까요?",<br>
+                                <span class="space"></span>"input": "",<br>
+                                <span class="space"></span>"output": "-  카드발급완료 후 <br>
+                                약 7일(영업일 기준)이내에 카드 <br>
+                                수령이 가능하며, 카드 배송 전 또는 <br>
+                                지점 도착 후 고객님께 문자로 <br>
+                                안내해드리고 있습니다. -\n 최근 
+                            </p>
                         </li>
                         <li class="item">
                             <label class="chk">
                                 <input type="checkbox" />
                                 <span>선택</span>
                             </label>
-                            <p class="data"> {
-                                "instruction": "국민행복카드 
-                            발급 후 바우처 신청을 해야 하나요?",
-                                "input": "",
-                                "output": "국민행복카드 발급은 
-                            바우처 사업의 신청과는 별개입니다.
-                            바우처 사업에 지원대상이 맞는지 
-                            확인 후 바우처 신청 경로로 
-                            신청하셔야 합니다.>>국민행복카드 발급은 
-                            바우처 사업의 신청과는 별개입니다.
-                            바우처 사업에 지원대상이 맞는지 
-                            확인 후 바우처 신청 경로로 
-                            신청하셔야 합니다.>>국민행복카드 </p>
+                            <p class="data">
+                                {<br>
+                                    <span class="space"></span>"instruction": "KB국민 다담카드 <br>
+                                선택 적립 서비스팩은 변경 <br>
+                                가능한가요?",<br>
+                                <span class="space"></span>"input": "",<br>
+                                <span class="space"></span>"output": "네, 선택 적립 <br>
+                                서비스팩은 홈페이지, KB Pay, <br>
+                                고객센터(1588-1688)를 통해서 월 <br>
+                                1회, 연 4회 이내 변경가능합니다.
+                            </p>
                         </li>
                         <li class="item">
                             <label class="chk">
                                 <input type="checkbox" />
                                 <span>선택</span>
                             </label>
-                            <p class="data"> {
-                                "instruction": "국민행복카드 
-                            발급 후 바우처 신청을 해야 하나요?",
-                                "input": "",
-                                "output": "국민행복카드 발급은 
-                            바우처 사업의 신청과는 별개입니다.
-                            바우처 사업에 지원대상이 맞는지 
-                            확인 후 바우처 신청 경로로 
-                            신청하셔야 합니다.>>국민행복카드 발급은 
-                            바우처 사업의 신청과는 별개입니다.
-                            바우처 사업에 지원대상이 맞는지 
-                            확인 후 바우처 신청 경로로 
-                            신청하셔야 합니다.>>국민행복카드 </p>
+                            <p class="data">
+                                {<br>
+                                    <span class="space"></span>"instruction": "KB국민카드로 <br>
+                                에버랜드 홈페이지에서 예매 시 <br>
+                                할인적용을 받을 수 있나요?",<br>
+                                <span class="space"></span>"input": "",<br>
+                                <span class="space"></span>"output": "- 에버랜드 <br>
+                                홈페이지에서 예매 시 할인 적용은 <br>
+                                에버랜드 주간이용권 예매인 경우만 <br>
+                                가능합니다.- 할인적용 대상카드가
+                            </p>
                         </li>
                         <li class="item">
                             <label class="chk">
                                 <input type="checkbox" />
                                 <span>선택</span>
                             </label>
-                            <p class="data"> {
-                                "instruction": "국민행복카드 
-                            발급 후 바우처 신청을 해야 하나요?",
-                                "input": "",
-                                "output": "국민행복카드 발급은 
-                            바우처 사업의 신청과는 별개입니다.
-                            바우처 사업에 지원대상이 맞는지 
-                            확인 후 바우처 신청 경로로 
-                            신청하셔야 합니다.>>국민행복카드 발급은 
-                            바우처 사업의 신청과는 별개입니다.
-                            바우처 사업에 지원대상이 맞는지 
-                            확인 후 바우처 신청 경로로 
-                            신청하셔야 합니다.>>국민행복카드 </p>
+                            <p class="data">
+                                {<br>
+                                    <span class="space"></span>"instruction": "만약 2~3개월 <br>
+                                무이자 할부가 적용되는 가맹점에서 <br>
+                                6개월 할부를 이용하는 경우 <br>
+                                2~3개월은 무이자 할부가 적용되고, <br>
+                                나머지는 할부수수료가 청구되는 <br>
+                                건가요",<br>
+                                <span class="space"></span>"input": "",<br>
+                                <span class="space"></span>"output": "아닙니다.\"할부 
+                            </p>
                         </li>
                         <li class="item">
                             <label class="chk">
                                 <input type="checkbox" />
                                 <span>선택</span>
                             </label>
-                            <p class="data"> {
-                                "instruction": "국민행복카드 
-                            발급 후 바우처 신청을 해야 하나요?",
-                                "input": "",
-                                "output": "국민행복카드 발급은 
-                            바우처 사업의 신청과는 별개입니다.
-                            바우처 사업에 지원대상이 맞는지 
-                            확인 후 바우처 신청 경로로 
-                            신청하셔야 합니다.>>국민행복카드 발급은 
-                            바우처 사업의 신청과는 별개입니다.
-                            바우처 사업에 지원대상이 맞는지 
-                            확인 후 바우처 신청 경로로 
-                            신청하셔야 합니다.>>국민행복카드 </p>
+                            <p class="data">
+                                {<br>
+                                    <span class="space"></span>"instruction": "KB국민 <br>
+                                스타카드의 맞춤서비스 신청시 <br>
+                                무이자 할부 서비스는 무조건 제공 <br>
+                                되나요?",<br>
+                                <span class="space"></span>"input": "",<br>
+                                <span class="space"></span>"output": "네 맞습니다.<br>
+                                고객님께서 맞춤서비스<br>
+                                (엔터테인먼트, GS칼텍스주유할인, 
+                            </p>
                         </li>
                         <li class="item">
                             <label class="chk">
                                 <input type="checkbox" />
                                 <span>선택</span>
                             </label>
-                            <p class="data"> {
-                                "instruction": "국민행복카드 
-                            발급 후 바우처 신청을 해야 하나요?",
-                                "input": "",
-                                "output": "국민행복카드 발급은 
-                            바우처 사업의 신청과는 별개입니다.
-                            바우처 사업에 지원대상이 맞는지 
-                            확인 후 바우처 신청 경로로 
-                            신청하셔야 합니다.>>국민행복카드 발급은 
-                            바우처 사업의 신청과는 별개입니다.
-                            바우처 사업에 지원대상이 맞는지 
-                            확인 후 바우처 신청 경로로 
-                            신청하셔야 합니다.>>국민행복카드 </p>
+                            <p class="data">
+                                {<br>
+                                    <span class="space"></span>"instruction": "주유할인 <br>
+                                서비스는 주유 즉시 할인이 되는 <br>
+                                건가요?",<br>
+                                <span class="space"></span>"input": "",<br>
+                                <span class="space"></span>"output": "아닙니다.주유할인 <br>
+                                서비스는 청구할인 방식으로 할인 <br>
+                                적용이 됩니다.즉, 고객님께서 <br>
+                                서비스를 이용할 당시에는 원래
+                            </p>
                         </li>
                         <li class="item">
                             <label class="chk">
                                 <input type="checkbox" />
                                 <span>선택</span>
                             </label>
-                            <p class="data"> {
-                                "instruction": "국민행복카드 
-                            발급 후 바우처 신청을 해야 하나요?",
-                                "input": "",
-                                "output": "국민행복카드 발급은 
-                            바우처 사업의 신청과는 별개입니다.
-                            바우처 사업에 지원대상이 맞는지 
-                            확인 후 바우처 신청 경로로 
-                            신청하셔야 합니다.>>국민행복카드 발급은 
-                            바우처 사업의 신청과는 별개입니다.
-                            바우처 사업에 지원대상이 맞는지 
-                            확인 후 바우처 신청 경로로 
-                            신청하셔야 합니다.>>국민행복카드 </p>
+                            <p class="data">
+                                {<br>
+                                    <span class="space"></span>"instruction": "KB국민카드의 <br>
+                                영화할인 및 주유할인 등 서비스 <br>
+                                적용시 월간한도 제한 월/년 기준은 <br>
+                                어떻게 되나요?",<br>
+                                <span class="space"></span>"input": "",<br>
+                                <span class="space"></span>"output": "월기준은 매월 1일 ~ <br>
+                                말일까지 이고, 년기준은 매년 1월 ~ <br>
+                                12월까지 입니다."
+                            </p>
                         </li>
                         <li class="item">
                             <label class="chk">
                                 <input type="checkbox" />
                                 <span>선택</span>
                             </label>
-                            <p class="data"> {
-                                "instruction": "국민행복카드 
-                            발급 후 바우처 신청을 해야 하나요?",
-                                "input": "",
-                                "output": "국민행복카드 발급은 
-                            바우처 사업의 신청과는 별개입니다.
-                            바우처 사업에 지원대상이 맞는지 
-                            확인 후 바우처 신청 경로로 
-                            신청하셔야 합니다.>>국민행복카드 발급은 
-                            바우처 사업의 신청과는 별개입니다.
-                            바우처 사업에 지원대상이 맞는지 
-                            확인 후 바우처 신청 경로로 
-                            신청하셔야 합니다.>>국민행복카드 </p>
+                            <p class="data">
+                                {<br>
+                                    <span class="space"></span>"instruction": "THE CJ <br>
+                                KB국민카드로 CGV이용시 얼마나 <br>
+                                할인되나요?",<br>
+                                <span class="space"></span>"input": "",<br>
+                                <span class="space"></span>"output": "THE CJ <br>
+                                KB국민카드로 CGV 홈페이지 또는 <br>
+                                CGV 현장에서 영화 예매시 1일 1회, <br>
+                                년 12회까지 \n본인회원 또는
+                            </p>
                         </li>
                     </ul>
                     <div class="btn-more">
-                        <button type="button" class="btn">데이터 더보기</button>
+                        <button type="button" class="btn btn-type1" disabled>데이터 더보기</button>
                     </div>
                 </div>
             </div>
+            <!--//dataset_국민카드_고객센터-->
+            <!--dataset_자동차_법규_교통상식-->
+            <div class="list-card" data-dataset="1" style="display: none;">
+                <div class="layout">
+                    <ul>
+                        <li class="item">
+                            <label class="chk">
+                                <input type="checkbox" />
+                                <span>선택</span>
+                            </label>
+                            <p class="data">
+                                {<br>
+                                    <span class="space"></span>"instruction": "법에서 도로의 <br>
+                                정의 알려줘",<br>
+                                <span class="space"></span>"input": "",<br>
+                                <span class="space"></span>"output": "제2조(정의)\n이 <br>
+                                법에서 사용하는 용어의 뜻은 다음과 <br>
+                                같다.\n1. \"도로\"란 다음 각 목에 <br>
+                                해당하는 곳을 말한다.\n가. <br>
+                                「도로법」에 따른 도로\n나. 
+                            </p>
+                        </li>
+                        <li class="item">
+                            <label class="chk">
+                                <input type="checkbox" />
+                                <span>선택</span>
+                            </label>
+                            <p class="data">
+                                {<br>
+                                    <span class="space"></span>"instruction": "법에서 도로의 <br>
+                                의미는 무엇이지?",<br>
+                                <span class="space"></span>"input": "",<br>
+                                <span class="space"></span>"output": "제2조(정의)\n이 <br>
+                                법에서 사용하는 용어의 뜻은 다음과 <br>
+                                같다.\n1. \"도로\"란 다음 각 목에 <br>
+                                해당하는 곳을 말한다.\n가. <br>
+                                「도로법」에 따른 도로\n나. 
+                            </p>
+                        </li>
+                        <li class="item">
+                            <label class="chk">
+                                <input type="checkbox" />
+                                <span>선택</span>
+                            </label>
+                            <p class="data">
+                                {<br>
+                                    <span class="space"></span>"instruction": "법에서 도로는 <br>
+                                어떻게 정의하지?",<br>
+                                <span class="space"></span>"input": "",<br>
+                                <span class="space"></span>"output": "제2조(정의)\n이 <br>
+                                법에서 사용하는 용어의 뜻은 다음과 <br>
+                                같다.\n1. \"도로\"란 다음 각 목에 <br>
+                                해당하는 곳을 말한다.\n가. <br>
+                                「도로법」에 따른 도로\n나. 
+                            </p>
+                        </li>
+                        <li class="item">
+                            <label class="chk">
+                                <input type="checkbox" />
+                                <span>선택</span>
+                            </label>
+                            <p class="data">
+                                {<br>
+                                    <span class="space"></span>"instruction": "법에서 도로를 <br>
+                                어떻게 명시하고 있지?",<br>
+                                <span class="space"></span>"input": "",<br>
+                                <span class="space"></span>"output": "제2조(정의)\n이 <br>
+                                법에서 사용하는 용어의 뜻은 다음과 <br>
+                                같다.\n1. \"도로\"란 다음 각 목에 <br>
+                                해당하는 곳을 말한다.\n가. <br>
+                                「도로법」에 따른 도로\n나. 
+                            </p>
+                        </li>
+                        <li class="item">
+                            <label class="chk">
+                                <input type="checkbox" />
+                                <span>선택</span>
+                            </label>
+                            <p class="data">
+                                {<br>
+                                    <span class="space"></span>"instruction": "교통법에 나오는 <br>
+                                도로의 정의는 무엇인지 알려줘",<br>
+                                <span class="space"></span>"input": "",<br>
+                                <span class="space"></span>"output": "제2조(정의)\n이 <br>
+                                법에서 사용하는 용어의 뜻은 다음과 <br>
+                                같다.\n1. \"도로\"란 다음 각 목에 <br>
+                                해당하는 곳을 말한다.\n가. <br>
+                                「도로법」에 따른 도로\n나. 
+                            </p>
+                        </li>
+                        <li class="item">
+                            <label class="chk">
+                                <input type="checkbox" />
+                                <span>선택</span>
+                            </label>
+                            <p class="data">
+                                {<br>
+                                    <span class="space"></span>"instruction": "교통법상 도로를 <br>
+                                어떻게 정의하는지 알려줘",<br>
+                                <span class="space"></span>"input": "",<br>
+                                <span class="space"></span>"output": "제2조(정의)\n이 <br>
+                                법에서 사용하는 용어의 뜻은 다음과 <br>
+                                같다.\n1. \"도로\"란 다음 각 목에 <br>
+                                해당하는 곳을 말한다.\n가. <br>
+                                「도로법」에 따른 도로\n나. 
+                            </p>
+                        </li>
+                        <li class="item">
+                            <label class="chk">
+                                <input type="checkbox" />
+                                <span>선택</span>
+                            </label>
+                            <p class="data">
+                                {<br>
+                                    <span class="space"></span>"instruction": "도로에 대한 <br>
+                                교통법의 정의가 뭐야?",<br>
+                                <span class="space"></span>"input": "",<br>
+                                <span class="space"></span>"output": "제2조(정의)\n이 <br>
+                                법에서 사용하는 용어의 뜻은 다음과 <br>
+                                같다.\n1. \"도로\"란 다음 각 목에 <br>
+                                해당하는 곳을 말한다.\n가. <br>
+                                「도로법」에 따른 도로\n나. 
+                            </p>
+                        </li>
+                        <li class="item">
+                            <label class="chk">
+                                <input type="checkbox" />
+                                <span>선택</span>
+                            </label>
+                            <p class="data">
+                                {<br>
+                                    <span class="space"></span>"instruction": "도로를 법에서는 <br>
+                                뭐라고 해?",<br>
+                                <span class="space"></span>"input": "",<br>
+                                <span class="space"></span>"output": "제2조(정의)\n이 <br>
+                                법에서 사용하는 용어의 뜻은 <br>
+                                다음과 같다.\n1. \"도로\"란 다음 각 <br>
+                                목에 해당하는 곳을 말한다.\n가. <br>
+                                「도로법」에 따른 도로\n나. 
+                            </p>
+                        </li>
+                        <li class="item">
+                            <label class="chk">
+                                <input type="checkbox" />
+                                <span>선택</span>
+                            </label>
+                            <p class="data">
+                                {<br>
+                                    <span class="space"></span>"instruction": "도로는 법에서 <br>
+                                무슨 뜻이지?",<br>
+                                <span class="space"></span>"input": "",<br>
+                                <span class="space"></span>"output": "제2조(정의)\n이 <br>
+                                법에서 사용하는 용어의 뜻은 다음과 <br>
+                                같다.\n1. \"도로\"란 다음 각 목에 <br>
+                                해당하는 곳을 말한다.\n가. <br>
+                                「도로법」에 따른 도로\n나. 
+                            </p>
+                        </li>
+                        <li class="item">
+                            <label class="chk">
+                                <input type="checkbox" />
+                                <span>선택</span>
+                            </label>
+                            <p class="data">
+                                {<br>
+                                    <span class="space"></span>"instruction": "자동차 전용 <br>
+                                도로가 뭐야?",<br>
+                                <span class="space"></span>"input": "",<br>
+                                <span class="space"></span>"output": "제2조(정의)\n이 <br>
+                                법에서 사용하는 용어의 뜻은 다음과 <br>
+                                같다.\n2. \"자동차전용도로\"란 <br>
+                                자동차만 다닐 수 있도록 설치된 <br>
+                                도로를 말한다."
+                            </p>
+                        </li>
+                        <li class="item">
+                            <label class="chk">
+                                <input type="checkbox" />
+                                <span>선택</span>
+                            </label>
+                            <p class="data">
+                                {<br>
+                                    <span class="space"></span>"instruction": "자동차 <br>
+                                전용도로의 정의를 알려줘",<br>
+                                <span class="space"></span>"input": "",<br>
+                                <span class="space"></span>"output": "제2조(정의)\n이 <br>
+                                법에서 사용하는 용어의 뜻은 다음과 <br>
+                                같다.\n2. \"자동차전용도로\"란 <br>
+                                자동차만 다닐 수 있도록 설치된 <br>
+                                도로를 말한다."
+                            </p>
+                        </li>
+                        <li class="item">
+                            <label class="chk">
+                                <input type="checkbox" />
+                                <span>선택</span>
+                            </label>
+                            <p class="data">
+                                {<br>
+                                    <span class="space"></span>"instruction": "자동차 <br>
+                                전용도로란 어떤 도로를 의미하지?",<br>
+                                <span class="space"></span>"input": "",<br>
+                                <span class="space"></span>"output": "제2조(정의)\n이 <br>
+                                법에서 사용하는 용어의 뜻은 다음과 <br>
+                                같다.\n2. \"자동차전용도로\"란 <br>
+                                자동차만 다닐 수 있도록 설치된 <br>
+                                도로를 말한다."
+                            </p>
+                        </li>
+                        <li class="item">
+                            <label class="chk">
+                                <input type="checkbox" />
+                                <span>선택</span>
+                            </label>
+                            <p class="data">
+                                {<br>
+                                    <span class="space"></span>"instruction": "법에서 <br>
+                                중앙선이란?",<br>
+                                <span class="space"></span>"input": "",<br>
+                                <span class="space"></span>"output": "제2조(정의)\n이 <br>
+                                법에서 사용하는 용어의 뜻은 다음과 <br>
+                                같다.\n5. \"중앙선\"이란 차마의 <br>
+                                통행 방향을 명확하게 구분하기 <br>
+                                위하여 도로에 황색 실선(實線)이나 
+                            </p>
+                        </li>
+                        <li class="item">
+                            <label class="chk">
+                                <input type="checkbox" />
+                                <span>선택</span>
+                            </label>
+                            <p class="data">
+                                {<br>
+                                    <span class="space"></span>"instruction": "법에서 중앙선의 <br>
+                                의미가 무엇인지 알려줘",<br>
+                                <span class="space"></span>"input": "",<br>
+                                <span class="space"></span>"output": "제2조(정의)\n이 <br>
+                                법에서 사용하는 용어의 뜻은 다음과 <br>
+                                같다.\n5. \"중앙선\"이란 차마의 <br>
+                                통행 방향을 명확하게 구분하기 <br>
+                                위하여 도로에 황색 실선(實線)이나
+                            </p>
+                        </li>
+                        <li class="item">
+                            <label class="chk">
+                                <input type="checkbox" />
+                                <span>선택</span>
+                            </label>
+                            <p class="data">
+                                {<br>
+                                    <span class="space"></span>"instruction": "법에서 중앙선은 <br>
+                                어떻게 정의하지?",<br>
+                                <span class="space"></span>"input": "",<br>
+                                <span class="space"></span>"output": "제2조(정의)\n이 <br>
+                                법에서 사용하는 용어의 뜻은 다음과 <br>
+                                같다.\n5. \"중앙선\"이란 차마의 <br>
+                                통행 방향을 명확하게 구분하기 <br>
+                                위하여 도로에 황색 실선(實線)이나
+                            </p>
+                        </li>
+                        <li class="item">
+                            <label class="chk">
+                                <input type="checkbox" />
+                                <span>선택</span>
+                            </label>
+                            <p class="data">
+                                {<br>
+                                    <span class="space"></span>"instruction": "중앙선을 칭하는 <br>
+                                교통법에서의 의미는 뭐야?",<br>
+                                <span class="space"></span>"input": "",<br>
+                                <span class="space"></span>"output": "제2조(정의)\n이 <br>
+                                법에서 사용하는 용어의 뜻은 <br>
+                                다음과 같다.\n5. \"중앙선\"이란 <br>
+                                차마의 통행 방향을 명확하게 <br>
+                                구분하기 위하여 도로에 황색 
+                            </p>
+                        </li>
+                        <li class="item">
+                            <label class="chk">
+                                <input type="checkbox" />
+                                <span>선택</span>
+                            </label>
+                            <p class="data">
+                                {<br>
+                                    <span class="space"></span>"instruction": "차로 와 차로를 <br>
+                                구분하기 위해 경계부분을 <br>
+                                안전표지로 구분한 선을 무엇이라고 <br>
+                                말하지?",<br>
+                                <span class="space"></span>"input": "",<br>
+                                <span class="space"></span>"output": "제2조(정의)\n이 <br>
+                                법에서 사용하는 용어의 뜻은 <br>
+                                다음과 같다.\n7. \"차선\"이란 
+                            </p>
+                        </li>
+                        <li class="item">
+                            <label class="chk">
+                                <input type="checkbox" />
+                                <span>선택</span>
+                            </label>
+                            <p class="data">
+                                {<br>
+                                    <span class="space"></span>"instruction": "차로의 경계를 <br>
+                                구분하는 지점에 안전표지로 표시한 <br>
+                                선을 의미하는 용어는 무엇이지?",<br>
+                                <span class="space"></span>"input": "",<br>
+                                <span class="space"></span>"output": "제2조(정의)\n이 <br>
+                                법에서 사용하는 용어의 뜻은 <br>
+                                다음과 같다.\n7. \"차선\"이란 <br>
+                                차로와 차로를 구분하기 위하여 그 
+                            </p>
+                        </li>
+                        <li class="item">
+                            <label class="chk">
+                                <input type="checkbox" />
+                                <span>선택</span>
+                            </label>
+                            <p class="data">
+                                {<br>
+                                    <span class="space"></span>"instruction": "차로 와 차로 <br>
+                                사이의 선을 뭐라고 해?",<br>
+                                <span class="space"></span>"input": "",<br>
+                                <span class="space"></span>"output": "제2조(정의)\n이 <br>
+                                법에서 사용하는 용어의 뜻은 다음과 <br>
+                                같다.\n7. \"차선\"이란 차로와 <br>
+                                차로를 구분하기 위하여 그 <br>
+                                경계지점을 안전표지로 표시한 선을 
+                            </p>
+                        </li>
+                        <li class="item">
+                            <label class="chk">
+                                <input type="checkbox" />
+                                <span>선택</span>
+                            </label>
+                            <p class="data">
+                                {<br>
+                                    <span class="space"></span>"instruction": "차로 와 차로 <br>
+                                사이의 구분선을 뭐라 부르니?",<br>
+                                <span class="space"></span>"input": "",<br>
+                                <span class="space"></span>"output": "제2조(정의)\n이 <br>
+                                법에서 사용하는 용어의 뜻은 다음과 <br>
+                                같다.\n7. \"차선\"이란 차로와 <br>
+                                차로를 구분하기 위하여 그 <br>
+                                경계지점을 안전표지로 표시한 선을
+                            </p>
+                        </li>
+                        <li class="item">
+                            <label class="chk">
+                                <input type="checkbox" />
+                                <span>선택</span>
+                            </label>
+                            <p class="data">
+                                {<br>
+                                    <span class="space"></span>"instruction": "차로 와 차로 <br>
+                                사이를 나누는 선이 뭐야?",<br>
+                                <span class="space"></span>"input": "",<br>
+                                <span class="space"></span>"output": "제2조(정의)\n이 <br>
+                                법에서 사용하는 용어의 뜻은 다음과 <br>
+                                같다.\n7. \"차선\"이란 차로와 <br>
+                                차로를 구분하기 위하여 그 <br>
+                                경계지점을 안전표지로 표시한 선을 
+                            </p>
+                        </li>
+                        <li class="item">
+                            <label class="chk">
+                                <input type="checkbox" />
+                                <span>선택</span>
+                            </label>
+                            <p class="data">
+                                {<br>
+                                    <span class="space"></span>"instruction": "노면전차 <br>
+                                전용로는 어떤 도로를 말하는 거지?",<br>
+                                <span class="space"></span>"input": "",<br>
+                                <span class="space"></span>"output": "제2조(정의)\n이 <br>
+                                법에서 사용하는 용어의 뜻은 다음과 <br>
+                                같다.\n7의2. \"노면전차 전용로\"란 <br>
+                                도로에서 궤도를 설치하고, 안전표지 <br>
+                                또는 인공구조물로 경계를 표시하여 
+                            </p>
+                        </li>
+                        <li class="item">
+                            <label class="chk">
+                                <input type="checkbox" />
+                                <span>선택</span>
+                            </label>
+                            <p class="data">
+                                {<br>
+                                    <span class="space"></span>"instruction": "노면전차 <br>
+                                전용로는 어떻게 정의할 수 있지?",<br>
+                                <span class="space"></span>"input": "",<br>
+                                <span class="space"></span>"output": "제2조(정의)\n이 <br>
+                                법에서 사용하는 용어의 뜻은 다음과 <br>
+                                같다.\n7의2. \"노면전차 전용로\"란 <br>
+                                도로에서 궤도를 설치하고, 안전표지 <br>
+                                또는 인공구조물로 경계를 표시하여 
+                            </p>
+                        </li>
+                        <li class="item">
+                            <label class="chk">
+                                <input type="checkbox" />
+                                <span>선택</span>
+                            </label>
+                            <p class="data">
+                                {<br>
+                                    <span class="space"></span>"instruction": "자전거도로는 <br>
+                                어떤 도로인가요?",<br>
+                                <span class="space"></span>"input": "",<br>
+                                <span class="space"></span>"output": "제2조(정의)\n이 <br>
+                                법에서 사용하는 용어의 뜻은 다음과 <br>
+                                같다.\n8. \"자전거도로\"란 <br>
+                                안전표지, 위험방지용 울타리나 그와 <br>
+                                비슷한 인공구조물로 경계를 
+                            </p>
+                        </li>
+                        <li class="item">
+                            <label class="chk">
+                                <input type="checkbox" />
+                                <span>선택</span>
+                            </label>
+                            <p class="data">
+                                {<br>
+                                    <span class="space"></span>"instruction": "자전거도로의 <br>
+                                의미는 무엇인가요?",<br>
+                                <span class="space"></span>"input": "",<br>
+                                <span class="space"></span>"output": "제2조(정의)\n이 <br>
+                                법에서 사용하는 용어의 뜻은 다음과 <br>
+                                같다.\n8. \"자전거도로\"란 <br>
+                                안전표지, 위험방지용 울타리나 그와 <br>
+                                비슷한 인공구조물로 경계를 
+                            </p>
+                        </li>
+                        <li class="item">
+                            <label class="chk">
+                                <input type="checkbox" />
+                                <span>선택</span>
+                            </label>
+                            <p class="data">
+                                {<br>
+                                    <span class="space"></span>"instruction": "자전거도로는 <br>
+                                어떻게 정의할 수 있나요?",<br>
+                                <span class="space"></span>"input": "",<br>
+                                <span class="space"></span>"output": "제2조(정의)\n이 <br>
+                                법에서 사용하는 용어의 뜻은 다음과 <br>
+                                같다.\n8. \"자전거도로\"란 <br>
+                                안전표지, 위험방지용 울타리나 <br>
+                                그와 비슷한 인공구조물로 경계를
+                            </p>
+                        </li>
+                        <li class="item">
+                            <label class="chk">
+                                <input type="checkbox" />
+                                <span>선택</span>
+                            </label>
+                            <p class="data">
+                                {<br>
+                                    <span class="space"></span>"instruction": "자전거도로를 <br>
+                                설명해줘",<br>
+                                <span class="space"></span>"input": "",<br>
+                                <span class="space"></span>"output": "제2조(정의)\n이 <br>
+                                법에서 사용하는 용어의 뜻은 다음과 <br>
+                                같다.\n8. \"자전거도로\"란 <br>
+                                안전표지, 위험방지용 울타리나 그와 <br>
+                                비슷한 인공구조물로 경계를 
+                            </p>
+                        </li>
+                        <li class="item">
+                            <label class="chk">
+                                <input type="checkbox" />
+                                <span>선택</span>
+                            </label>
+                            <p class="data">
+                                {<br>
+                                    <span class="space"></span>"instruction": "법에서 보도의 <br>
+                                정의는 무엇이지?",<br>
+                                <span class="space"></span>"input": "",<br>
+                                <span class="space"></span>"output": "제2조(정의)\n이 <br>
+                                법에서 사용하는 용어의 뜻은 다음과 <br>
+                                같다.\n10. \"보도\"(步道)란 <br>
+                                연석선, 안전표지나 그와 비슷한 <br>
+                                인공구조물로 경계를 표시하여 
+                            </p>
+                        </li>
+                        <li class="item">
+                            <label class="chk">
+                                <input type="checkbox" />
+                                <span>선택</span>
+                            </label>
+                            <p class="data">
+                                {<br>
+                                    <span class="space"></span>"instruction": "법에서 보도는 <br>
+                                어떤 곳을 의미하지?",<br>
+                                <span class="space"></span>"input": "",<br>
+                                <span class="space"></span>"output": "제2조(정의)\n이 <br>
+                                법에서 사용하는 용어의 뜻은 다음과 <br>
+                                같다.\n10. \"보도\"(步道)란 <br>
+                                연석선, 안전표지나 그와 비슷한 <br>
+                                인공구조물로 경계를 표시하여 
+                            </p>
+                        </li>
+                        <li class="item">
+                            <label class="chk">
+                                <input type="checkbox" />
+                                <span>선택</span>
+                            </label>
+                            <p class="data">
+                                {<br>
+                                    <span class="space"></span>"instruction": "법적으로 어떤 <br>
+                                것을 자동차라고 말하나요?",<br>
+                                <span class="space"></span>"input": "",<br>
+                                <span class="space"></span>"output": "제2조(정의)\n이 <br>
+                                법에서 사용하는 용어의 뜻은 다음과 <br>
+                                같다.\n18. \"자동차\"란 철길이나 <br>
+                                가설된 선을 이용하지 아니하고 <br>
+                                원동기를 사용하여 운전되는 
+                            </p>
+                        </li>
+                    </ul>
+                    <div class="btn-more">
+                        <button type="button" class="btn btn-type1" disabled>데이터 더보기</button>
+                    </div>
+                </div>
+            </div>
+            <!--//dataset_자동차_법규_교통상식-->
+            <!--dataset_군사용어_시사-->
+            <div class="list-card" data-dataset="2" style="display: none;">
+                <div class="layout">
+                    <ul>
+                        <li class="item">
+                            <label class="chk">
+                                <input type="checkbox" />
+                                <span>선택</span>
+                            </label>
+                            <p class="data"> 
+                                {<br>
+                                    <span class="space"></span>"instruction": "남북 정상회담의 <br>
+                                성과와 의의",<br>
+                                <span class="space"></span>"input": "",<br>
+                                <span class="space"></span>"output": "세계인의 관심을 <br>
+                                집중시켰던 판문점 선언은 매우 <br>
+                                미래지향적이면서도 현실적인 <br>
+                                판단이 종합적으로 고려된 문건이다. <br>
+                                ‘ 미래지향적’ 이라 함은 반복되어 왔던 <br>
+                            </p>
+                        </li>
+                        <li class="item">
+                            <label class="chk">
+                                <input type="checkbox" />
+                                <span>선택</span>
+                            </label>
+                            <p class="data">
+                                {<br>
+                                <span class="space"></span>"instruction": "남북 정상회담의 <br>
+                                성과와 의의",<br>
+                                <span class="space"></span>"input": "",<br>
+                                <span class="space"></span>"output": "그리고 그간 남북 <br>
+                                정상회담에서 합의된 내용들이 <br>
+                                안정적으로\n이행될 수 있는 조건을 <br>
+                                담보하기 어려웠던 점을 극복하기 <br>
+                                위해, 향후 추진과정에서 발생할 수 
+                            </p>
+                        </li>
+                        <li class="item">
+                            <label class="chk">
+                                <input type="checkbox" />
+                                <span>선택</span>
+                            </label>
+                            <p class="data">
+                                {<br>
+                                <span class="space"></span>"instruction": "남북 정상회담의 <br>
+                                성과와 의의",<br>
+                                <span class="space"></span>"input": "",<br>
+                                <span class="space"></span>"output": "4월 27일 전 세계의 <br>
+                                이목을 집중시켰던 남북 정\n상회담의<br>
+                                성과에 대해 국내외적으로 <br>
+                                다양한\n평가가 나오고 있다. <br>
+                                전반적으로, 이번 정상회담의때문에 
+                            </p>
+                        </li>
+                        <li class="item">
+                            <label class="chk">
+                                <input type="checkbox" />
+                                <span>선택</span>
+                            </label>
+                            <p class="data">
+                                {<br>
+                                <span class="space"></span>"instruction": "AI는 전쟁의 <br>
+                                양상을 어떻게 바꿀 것인가?",<br>
+                                <span class="space"></span>"input": "",<br>
+                                <span class="space"></span>"output": "따라서 전쟁에 대한 <br>
+                                지배적인 견해와 AI의 분석능력을 <br>
+                                기반으로 하는 알고리즘 전쟁 개념은 <br>
+                                기본적인 전투 역학을 토대로 전력 <br>
+                                소모의 중요성을 강조하게 될 것이다.
+                            </p>
+                        </li>
+                        <li class="item">
+                            <label class="chk">
+                                <input type="checkbox" />
+                                <span>선택</span>
+                            </label>
+                            <p class="data">
+                                {<br>
+                                    <span class="space"></span>"instruction": "AI는 전쟁의 <br>
+                                양상을 어떻게 바꿀 것인가?",<br>
+                                <span class="space"></span>"input": "",<br>
+                                <span class="space"></span>"output": "다만 종국에는 전력의 <br>
+                                규모와 소모 속도에 의해 승리가 <br>
+                                결정될 수 있다. 둘째, 필요한 AI·<br>
+                                무인체계 전력의 추산과 사용방법을 <br>
+                                구체화해야 한다. 현재의 교리들을 
+                            </p>
+                        </li>
+                        <li class="item">
+                            <label class="chk">
+                                <input type="checkbox" />
+                                <span>선택</span>
+                            </label>
+                            <p class="data">
+                                {<br>
+                                    <span class="space"></span>"instruction": "AI는 전쟁의 <br>
+                                양상을 어떻게 바꿀 것인가?",<br>
+                                <span class="space"></span>"input": "",<br>
+                                <span class="space"></span>"output": "현재 우리는 우리의 <br>
+                                삶과 사회의 모든 측면에서 급격한 <br>
+                                영향을 미치고 있는 파괴적 <br>
+                                기술변화의 시대에 살고 있다. <br>
+                                이는 특히 30여 년 전부터 시작된 
+                            </p>
+                        </li>
+                        <li class="item">
+                            <label class="chk">
+                                <input type="checkbox" />
+                                <span>선택</span>
+                            </label>
+                            <p class="data">
+                                {<br>
+                                    <span class="space"></span>"instruction": "남북 정상회담의 <br>
+                                성과와 의의",<br>
+                                <span class="space"></span>"input": "",<br>
+                                <span class="space"></span>"output": "둘째, 이번 선언은 <br>
+                                한국정부가 대북제재를 이행\n하는 <br>
+                                상황에서 가능한 낮은 수준의 <br>
+                                교류협력을 명\n시하고 있다. 이는 <br>
+                                완벽하고 검증가능하며 불가역\n적인 
+                            </p>
+                        </li>
+                        <li class="item">
+                            <label class="chk">
+                                <input type="checkbox" />
+                                <span>선택</span>
+                            </label>
+                            <p class="data">
+                                {<br>
+                                    <span class="space"></span>"instruction": "남북 정상회담의 <br>
+                                성과와 의의",<br>
+                                <span class="space"></span>"input": "",<br>
+                                <span class="space"></span>"output": "남북이 <br>
+                                ‘각계각층의\n다방면적인 협력과 <br>
+                                교류왕래 및 접촉을 활성화’하\n기로 <br>
+                                했기 때문에 6.15를 비롯하여 <br>
+                                공동행사들이\n매우 빠른 속도로 
+                            </p>
+                        </li>
+                        <li class="item">
+                            <label class="chk">
+                                <input type="checkbox" />
+                                <span>선택</span>
+                            </label>
+                            <p class="data">
+                                {<br>
+                                    <span class="space"></span>"instruction": "남북 정상회담의<br> 
+                                성과와 의의",<br>
+                                <span class="space"></span>"input": "",<br>
+                                <span class="space"></span>"output": "셋째, 남북 합의에서 <br>
+                                구체성을 갖는 내용은 군사\n적 <br>
+                                신뢰구축과 관련한 조치들이다. <br>
+                                이번 선언에는\n남북 간 합의내용에 <br>
+                                항상 들어가는 불가침 원칙이\n나 
+                            </p>
+                        </li>
+                        <li class="item">
+                            <label class="chk">
+                                <input type="checkbox" />
+                                <span>선택</span>
+                            </label>
+                            <p class="data">
+                                {<br>
+                                    <span class="space"></span>"instruction": "남북 정상회담의 <br>
+                                성과와 의의",<br>
+                                <span class="space"></span>"input": "",<br>
+                                <span class="space"></span>"output": "일각에서는 ‘남과 북은 <br>
+                                한반도 비핵화를 위한 국\n제사회의 <br>
+                                지지와 협력을 위해 적극 노력하기로 <br>
+                                하\n였다’는 내용이 왜 마지막에 <br>
+                                놓여있는가에 대한 의\n구심과 불만을 
+                            </p>
+                        </li>
+                        <li class="item">
+                            <label class="chk">
+                                <input type="checkbox" />
+                                <span>선택</span>
+                            </label>
+                            <p class="data">
+                                {<br>
+                                    <span class="space"></span>"instruction": "공중무인체계용 <br>
+                                네트워크의 효율적 구축 방향(작전 <br>
+                                수행능력 및 전시 생존성 보장을 <br>
+                                중심으로)",<br>
+                                <span class="space"></span>"input": "",<br>
+                                <span class="space"></span>"output": "최근 우크라이나와 <br>
+                                러시아 간의 전쟁에서 보듯 <br>
+                                공중무인체계(드론)의 능력 발전과 
+                            </p>
+                        </li>
+                        <li class="item">
+                            <label class="chk">
+                                <input type="checkbox" />
+                                <span>선택</span>
+                            </label>
+                            <p class="data">
+                                {<br>
+                                    <span class="space"></span>"instruction": "공중무인체계용 <br>
+                                네트워크의 효율적 구축 방향(작전 <br>
+                                수행능력 및 전시 생존성 보장을 <br>
+                                중심으로)",<br>
+                                <span class="space"></span>"input": "",<br>
+                                <span class="space"></span>"output": "다영역 작전의 개념이 <br>
+                                구체화되고 그 효과가 부각됨에 따라 <br>
+                                공중무인체계에 요구되는 임무 
+                            </p>
+                        </li>
+                        <li class="item">
+                            <label class="chk">
+                                <input type="checkbox" />
+                                <span>선택</span>
+                            </label>
+                            <p class="data">
+                                {<br>
+                                    <span class="space"></span>"instruction": "공중무인체계용 <br>
+                                네트워크의 효율적 구축 방향(작전 <br>
+                                수행능력 및 전시 생존성 보장을 <br>
+                                중심으로)",<br>
+                                <span class="space"></span>"input": "",<br>
+                                <span class="space"></span>"output": "첫째, 무인기와 <br>
+                                지상통제소 간 네트워크 환경분석을 <br>
+                                고도화하고 주파수 관리 및 
+                            </p>
+                        </li>
+                        <li class="item">
+                            <label class="chk">
+                                <input type="checkbox" />
+                                <span>선택</span>
+                            </label>
+                            <p class="data">
+                                {<br>
+                                    <span class="space"></span>"instruction": "공중무인체계용 <br>
+                                네트워크의 효율적 구축 방향(작전 <br>
+                                수행능력 및 전시 생존성 보장을 <br>
+                                중심으로)",<br>
+                                <span class="space"></span>"input": "",<br>
+                                <span class="space"></span>"output": "감시정찰과 <br>
+                                공격능력을 겸비한 <br>
+                                공중무인체계(드론)는 이제 일부 
+                            </p>
+                        </li>
+                        <li class="item">
+                            <label class="chk">
+                                <input type="checkbox" />
+                                <span>선택</span>
+                            </label>
+                            <p class="data">
+                                {<br>
+                                    <span class="space"></span>"instruction": "국방 AI <br>
+                                학습데이터 부족 극복 방안 : <br>
+                                합성데이터의 활용",<br>
+                                <span class="space"></span>"input": "",<br>
+                                <span class="space"></span>"output": "인공지능(AI, <br>
+                                Artificial Intelligence) 기술의 <br>
+                                핵심은 학습데이터의 확보이다. AI는 <br>
+                                기본적으로 데이터 학습을 통해 
+                            </p>
+                        </li>
+                        <li class="item">
+                            <label class="chk">
+                                <input type="checkbox" />
+                                <span>선택</span>
+                            </label>
+                            <p class="data">
+                                {<br>
+                                    <span class="space"></span>"instruction": "국방 AI <br>
+                                학습데이터 부족 극복 방안 : <br>
+                                합성데이터의 활용",<br>
+                                <span class="space"></span>"input": "",<br>
+                                <span class="space"></span>"output": "첫째, 합성데이터 <br>
+                                적용이 필요한 국방 분야를 식별해야 <br>
+                                한다. 둘째, 국방 분야 자체적으로 <br>
+                                합성데이터에 대한 기술력을 확보해야
+                            </p>
+                        </li>
+                        <li class="item">
+                            <label class="chk">
+                                <input type="checkbox" />
+                                <span>선택</span>
+                            </label>
+                            <p class="data">
+                                {<br>
+                                    <span class="space"></span>"instruction": "국방 AI <br>
+                                학습데이터 부족 극복 방안 : <br>
+                                합성데이터의 활용",<br>
+                                <span class="space"></span>"input": "",<br>
+                                <span class="space"></span>"output": "하지만 국방 분야에서 <br>
+                                AI 모델 개발에 필요한 충분한 양의 <br>
+                                데이터를 확보하는 것은 어렵다. 국방 <br>
+                                분야의 폐쇄적인 환경과 특수성으로 
+                            </p>
+                        </li>
+                        <li class="item">
+                            <label class="chk">
+                                <input type="checkbox" />
+                                <span>선택</span>
+                            </label>
+                            <p class="data">
+                                {<br>
+                                    <span class="space"></span>"instruction": "국방 AI <br>
+                                학습데이터 부족 극복 방안 : <br>
+                                합성데이터의 활용",<br>
+                                <span class="space"></span>"input": "",<br>
+                                <span class="space"></span>"output": "한국군도 첨단 군사력 <br>
+                                증강을 위해 무기체계 분야의 AI <br>
+                                적용을 추진하고 있다. 하지만 앞서 <br>
+                                설명한 국방 분야의 특성으로 인해 AI 
+                            </p>
+                        </li>
+                        <li class="item">
+                            <label class="chk">
+                                <input type="checkbox" />
+                                <span>선택</span>
+                            </label>
+                            <p class="data">
+                                {<br>
+                                    <span class="space"></span>"instruction": "영상기반의 <br>
+                                지능형 경계감시시스템 동향과 기술 <br>
+                                적용 방안",<br>
+                                <span class="space"></span>"input": "",<br>
+                                <span class="space"></span>"output": "감시영역의 <br>
+                                사각지대를 해소하기 위해 다수의 <br>
+                                CCTV를 운용하고 있으나, 이에 따른 <br>
+                                비용과 운용인력의 수급 또한 
+                            </p>
+                        </li>
+                        <li class="item">
+                            <label class="chk">
+                                <input type="checkbox" />
+                                <span>선택</span>
+                            </label>
+                            <p class="data">
+                                {<br>
+                                    <span class="space"></span>"instruction": "영상기반의 <br>
+                                지능형 경계감시시스템 동향과 기술 <br>
+                                적용 방안",<br>
+                                <span class="space"></span>"input": "",<br>
+                                <span class="space"></span>"output": "본고에서는 기존 <br>
+                                과학화경계시스템이 가진 한계점을 <br>
+                                극복하기 위해 지능형 <br>
+                                경계감시시스템의 동향을 살펴보고 
+                            </p>
+                        </li>
+                        <li class="item">
+                            <label class="chk">
+                                <input type="checkbox" />
+                                <span>선택</span>
+                            </label>
+                            <p class="data">
+                                {<br>
+                                    <span class="space"></span>"instruction": "영상기반의 <br>
+                                지능형 경계감시시스템 동향과 기술 <br>
+                                적용 방안",<br>
+                                <span class="space"></span>"input": "",<br>
+                                <span class="space"></span>"output": "우리 군은 2006년 <br>
+                                발표된 ‘21세기 대비 정예 과학군 <br>
+                                육성’ 정책에 따라 <br>
+                                과학화경계시스템의 시범 운용을 
+                            </p>
+                        </li>
+                        <li class="item">
+                            <label class="chk">
+                                <input type="checkbox" />
+                                <span>선택</span>
+                            </label>
+                            <p class="data">
+                                {<br>
+                                    <span class="space"></span>"instruction": "영상기반의 <br>
+                                지능형 경계감시시스템 동향과 기술 <br>
+                                적용 방안",<br>
+                                <span class="space"></span>"input": "",<br>
+                                <span class="space"></span>"output": "2016년부터 <br>
+                                2020년까지 최전방 11개 사단의 <br>
+                                GOP 철책에서 발생한 경보에 따른 <br>
+                                출동 사례가 12,190회나 발생하였다. /p>
+                        </li>
+                        <li class="item">
+                            <label class="chk">
+                                <input type="checkbox" />
+                                <span>선택</span>
+                            </label>
+                            <p class="data">
+                                {<br>
+                                    <span class="space"></span>"instruction": "영상기반의 <br>
+                                지능형 경계감시시스템 동향과 기술 <br>
+                                적용 방안",<br>
+                                <span class="space"></span>"input": "",<br>
+                                <span class="space"></span>"output": "이러한 문제에도 군이 <br>
+                                과학화경계시스템을 지속적으로 <br>
+                                추진하는 이유로는 병역자원 감소 <br>
+                                문제가 있다. 현재 50만 명 수준의 
+                            </p>
+                        </li>
+                        <li class="item">
+                            <label class="chk">
+                                <input type="checkbox" />
+                                <span>선택</span>
+                            </label>
+                            <p class="data">
+                                {<br>
+                                    <span class="space"></span>"instruction": "영상기반의 <br>
+                                지능형 경계감시시스템 동향과 기술 <br>
+                                적용 방안",<br>
+                                <span class="space"></span>"input": "",<br>
+                                <span class="space"></span>"output": "체계 측면에서 <br>
+                                살펴보면, 우리 군이 운용 중인 <br>
+                                과학화경계시스템은 근거리와 중거리 <br>
+                                카메라로 구성된 감시시스템, 광신호
+                            </p>
+                        </li>
+                        <li class="item">
+                            <label class="chk">
+                                <input type="checkbox" />
+                                <span>선택</span>
+                            </label>
+                            <p class="data">
+                                {<br>
+                                    <span class="space"></span>"instruction": "함정의 구성품별 <br>
+                                획득비에 기초한 장비유지비 추정",<br>
+                                <span class="space"></span>"input": "",<br>
+                                <span class="space"></span>"output": "특히 함정의 경우 함 <br>
+                                유형별 임무 관련 탑재 장비의 <br>
+                                차별성을 고려할 수 있고, 획득단계 <br>
+                                분석평가 비용분석 특징과의 연계성을 <br>
+                                높일 수 있는 장비유지비 추정 방법론
+                            </p>
+                        </li>
+                        <li class="item">
+                            <label class="chk">
+                                <input type="checkbox" />
+                                <span>선택</span>
+                            </label>
+                            <p class="data">
+                                {<br>
+                                    <span class="space"></span>"instruction": "일본의 <br>
+                                국가방위전략서 발간과 주요 쟁점",<br>
+                                <span class="space"></span>"input": "",<br>
+                                <span class="space"></span>"output": "최근 일본 기시다 <br>
+                                정부는 전략적 관점에서 방위정책의 <br>
+                                방향을 제시하는 ｢국가방위전략서｣<br>
+                                (国家防衛戦略)를 발간했다. 그간 <br>
+                                ｢방위계획 대강｣(防衛計画の大綱)
+                            </p>
+                        </li>
+                        <li class="item">
+                            <label class="chk">
+                                <input type="checkbox" />
+                                <span>선택</span>
+                            </label>
+                            <p class="data">
+                                {<br>
+                                    <span class="space"></span>"instruction": "일본의 <br>
+                                국가방위전략서 발간과 주요 쟁점",<br>
+                                <span class="space"></span>"input": "",<br>
+                                <span class="space"></span>"output": "기시다 정부는 <br>
+                                2023년부터 2027년까지 5년간 <br>
+                                방위정책을 구체적으로 실현해 나갈 <br>
+                                것인데, 그 과정에서 세 가지 이슈가 <br>
+                                주요 쟁점이 될 것이다. 첫째, 
+                            </p>
+                        </li>
+                        <li class="item">
+                            <label class="chk">
+                                <input type="checkbox" />
+                                <span>선택</span>
+                            </label>
+                            <p class="data">
+                                {<br>
+                                    <span class="space"></span>"instruction": "일본의 <br>
+                                국가방위전략서 발간과 주요 쟁점",<br>
+                                <span class="space"></span>"input": "",<br>
+                                <span class="space"></span>"output": "우리는 이와 같은 <br>
+                                일본의 방위력 강화와 그 안보적 <br>
+                                영향에 대해 면밀히 검토하는 동시에, <br>
+                                ｢자유, 평화, 번영의 인도-태평양 <br>
+                                전략｣에 맞추어 다양한 한미일 협력의 
+                            </p>
+                        </li>
+                        <li class="item">
+                            <label class="chk">
+                                <input type="checkbox" />
+                                <span>선택</span>
+                            </label>
+                            <p class="data">
+                                {<br>
+                                    <span class="space"></span>"instruction": "일본의 <br>
+                                국가방위전략서 발간과 주요 쟁점",<br>
+                                <span class="space"></span>"input": "",<br>
+                                <span class="space"></span>"output": "일본 기시다 정부는 <br>
+                                2022년 12월 16일 국무회의를 통해 <br>
+                                국가안보의 최상위문서인 <br>
+                                ｢국가안보전략서｣<br>
+                                (国家安全保障戦略)와 그
+                            </p>
+                        </li>
+                        <li class="item">
+                            <label class="chk">
+                                <input type="checkbox" />
+                                <span>선택</span>
+                            </label>
+                            <p class="data">
+                                {<br>
+                                    <span class="space"></span>"instruction": "병력 효율화를 <br>
+                                위한 인력소요 판단 업무수행 <br>
+                                발전방향",<br>
+                                <span class="space"></span>"input": "",<br>
+                                <span class="space"></span>"output": "인력소요 및 <br>
+                                정원관리와 관련된 주요 법규로는 <br>
+                                ｢국방개혁에 관한 법률｣과 그 시행령, <br>
+                                ｢국방조직 및 정원에 관한 통칙｣
+                            </p>
+                        </li>
+                    </ul>
+                    <div class="btn-more">
+                        <button type="button" class="btn btn-type1" disabled>데이터 더보기</button>
+                    </div>
+                </div>
+            </div>
+            <!--//dataset_군사용어_시사-->
         </div>
         <!--//body_layout-->
         <!--foot_layout-->

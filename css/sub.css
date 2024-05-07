@@ -40,7 +40,8 @@
 .service-box .tit h3{ font-weight: 500; font-size: 30px; color: #161616; line-height: 34px;}
 .service-box .select{ padding: 0 0 24px 0; margin: 26px 0 0 0; display: flex; flex-direction: column; position: relative;}
 .service-box .select .txt{ font-size: 14px; color: #161616; line-height: 14px;}
-.service-box .select .list{ height: 44px; background: url(../img/ico/icon_select_down.png) no-repeat calc(100% - 18px) center #fff; padding: 0 34px 0 15px; margin: 17px 0 0 0; border: 1px solid #B0B0B0; border-radius: 3px; appearance: none; -webkit-appearance: none; -moz-appearance: none;}
+.service-box .select .list{ height: 44px; background: url(../img/ico/icon_select_down.png) no-repeat calc(100% - 18px) center #fff; font-weight: 400; font-size: 14px; line-height: 43px; color: #B0B0B0; padding: 0 34px 0 15px; margin: 17px 0 0 0; border: 1px solid #B0B0B0; border-radius: 3px; appearance: none; -webkit-appearance: none; -moz-appearance: none;}
+.service-box .select .list:focus{ color: #161616;}
 .service-box .select .txt-info{ position: absolute; left: 0; bottom: 0;}
 .service-box .txt-info{ font-weight: 500; font-size: 12px; line-height: 12px;}
 .service-box .txt-info.ico-important{ background: url(../img/ico/icon_impor_red.png) no-repeat left top; color: #FF4054; padding: 0 0 0 16px;}
@@ -75,7 +76,7 @@
 
 .list-card{ padding-bottom: 100px;}
 .list-card ul{ display: flex; flex-wrap: wrap;}
-.list-card li{ width: 200px; height: 220px; background-color: #fff; padding: 35px 10px 10px 10px; border: 1px solid #b0b0b0; border-radius: 3px; overflow: hidden; position: relative;}
+.list-card li{ width: 200px; height: 220px; background-color: #fff; padding: 35px 7px 5px 10px; border: 1px solid #b0b0b0; border-radius: 3px; overflow: hidden; position: relative;}
 .list-card li + li{ margin-left: 20px;}
 .list-card li:nth-child(5n+1){ margin-left: 0;}
 .list-card li:nth-child(n+6){ margin-top: 20px;}
@@ -83,9 +84,12 @@
 .list-card .chk input{ position: absolute; top: 0; left: -9999px;}
 .list-card .chk span{ width: 20px; height: 20px; background-color: #fff; text-indent: -9999px; display: inline-block; border: 1px solid #B0B0B0; border-radius: 3px; position: absolute; top: 10px; left: 10px;}
 .list-card .chk input:checked + span{ background: url(../img/ico/icon_chk.png) no-repeat center center #0075FF; border-color: #0075FF;}
-.list-card .txt{ font-weight: 400; font-size: 12px; color: #585858; line-height: 20px; letter-spacing: 0;}
+.list-card .data{ font-weight: 400; font-size: 12px; color: #585858; line-height: 20px; letter-spacing: -0.4px;}
+.list-card .data .space{ width: 10px; height: 20px; display: inline-block;}
 .list-card .btn-more{ width: 100%; margin: 50px 0 0 0; display: flex; justify-content: center;}
-.list-card .btn-more button{ width: 200px; height: 50px; background-color: #CCD1D8; font-weight: 400; font-size: 14px; color: #fff; line-height: 15px; display: flex; align-items: center; justify-content: center; border-radius: 3px;}
+.list-card .btn-more button{ font-weight: 400; font-size: 14px; color: #fff; line-height: 15px; display: flex; align-items: center; justify-content: center; border-radius: 3px;}
+.list-card .btn-more button:disabled{ background-color: #CCD1D8;}
+.list-card .btn-more .btn-type1{ width: 200px; height: 50px; background-color:#0075FF;}
 
 .cont-head{ width: 100%; background-color: #F3F3F4; padding: 60px 0 30px 0; display: flex; flex-direction: column; position: sticky; top: 150px; left: 0; z-index: 9;}
 .cont-head .tit{ background: url(../img/ico/icon_AI_blue_26.png) no-repeat left top; font-weight: 400; font-size: 24px; color: #161616; line-height: 26px; padding: 0 0 40px 32px; position: sticky; top: 150px;}

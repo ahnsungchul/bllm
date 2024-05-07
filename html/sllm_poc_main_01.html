@@ -58,14 +58,14 @@
                         </div>
                         <div class="select">
                             <p class="txt">데이터셋과 기초 모델을 활용하여, AI 서비스를 만들 수 있습니다.</p>
-                            <select class="list">
-                                <option>데이터셋 선택하기</option>
+                            <select id="datasetMake" class="list" onchange="serviceMake.select()">
+                                <option value="0">데이터셋 선택하기</option>
                             </select>
-                            <p class="txt-info ico-important">데이터셋을 먼저 선택해주세요.</p>
+                            <p class="txt-info ico-important errorShow" data-txtError="datasetMake">데이터셋을 먼저 선택해주세요.</p>
                         </div>
                         <div class="btn">
                             <button type="button" class="btn-type1" disabled>데이터셋 만들기</button>
-                            <button type="button" class="btn-type1">AI 서비스 만들기</button>
+                            <button type="button" class="btn-type1" onclick="serviceMake.lp()">AI 서비스 만들기</button>
                             <p class="txt-info ico-warning">데이터셋 만들기는<br>blackolive에서 진행됩니다.</p>
                         </div>
                     </div>
@@ -75,14 +75,17 @@
                         </div>
                         <div class="select">
                             <p class="txt">모델 강화 학습까지 완료된 AI 서비스를 실행하세요.</p>
-                            <select class="list">
-                                <option>AI 서비스 선택하기</option>
+                            <select id="myService" class="list" onchange="myService.select()">
+                                <option value="0">AI 서비스 선택하기</option>
+                                <option value="1">현대자동자 AI 자동차 상식백과</option>
+                                <option value="2">국민카드 AI 고객센터</option>
+                                <option value="3">국방부 AI 군사용어 & 시사 </option>
                             </select>
-                            <p class="txt-info ico-important">AI 서비스를 먼저 선택해주세요.</p>
+                            <p class="txt-info ico-important errorShow" data-txtError="myService">AI 서비스를 먼저 선택해주세요.</p>
                         </div>
                         <div class="btn">
                             <button type="button" class="btn-type2">모델 개선</button>
-                            <button type="button" class="btn-type1 lpOpen" data-lp="lpMyService">AI 서비스 실행하기</button>
+                            <button type="button" class="btn-type1" onclick="myService.lp()">AI 서비스 실행하기</button>
                             <p class="txt-info ico-warning">이미 만들어진 AI 서비스라도<br>기초 모델 변경과 모델 강화 학습이 가능합니다.</p>
                         </div>
                     </div>
