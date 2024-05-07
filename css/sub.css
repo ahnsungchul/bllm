@@ -18,6 +18,13 @@
 #lp_layout .lp_wrap.lpMyService .service{ margin: 30px 0 0 0;}
 #lp_layout .lp_wrap.lpMyService .service p{ width: 320px; height: 44px; background: url(../img/ico/icon_AI_blue_20.png) no-repeat 15px center #fff; font-weight: 400; font-size: 14px; color: #161616; line-height: 14px; padding: 0 0 0 39px; display: flex; align-items: center; border-radius: 3px;}
 #lp_layout .lp_wrap.lpMyService .btn{ margin-top: 34px;}
+#lp_layout .lp_wrap.lpServicePlay{ width: 600px; height: 392px; background-color: #161616; padding: 0; margin: -196px 0 0 -300px; flex-direction: column; align-items: center; justify-content: center; top: 50%; left: 50%;}
+#lp_layout .lp_wrap.lpServicePlay .tit h3{ font-weight: 300; font-size: 20px; color: #fff; text-align: center; line-height: 30px;}
+#lp_layout .lp_wrap.lpServicePlay .name{ padding: 0 0 23px 0; margin: 30px 0 0 0; position: relative;}
+#lp_layout .lp_wrap.lpServicePlay .name input{ width: 320px; height: 44px; background-color: #fff; font-weight: 400; font-size: 14px; color: #161616; line-height: 42px; padding: 0 14px; display: inline-block; border: 1px solid #B0B0B0; border-radius: 3px;}
+#lp_layout .lp_wrap.lpServicePlay .name input::placeholder{ color: #B0B0B0;}
+#lp_layout .lp_wrap.lpServicePlay .name .txt-info{ position: absolute; bottom: 0; left: 0;}
+#lp_layout .lp_wrap.lpServicePlay .btn{ margin-top: 11px;}
 #lp_layout .lp_wrap.lpServiceStop{ width: 540px; height: 309px; background-color: #161616; padding: 0; margin: -154px 0 0 -270px; flex-direction: column; align-items: center; justify-content: center; top: 50%; left: 50%;}
 #lp_layout .lp_wrap.lpServiceStop .tit h3{ font-weight: 300; font-size: 20px; color: #fff; text-align: center; line-height: 30px;}
 #lp_layout .lp_wrap.lpServiceStop .service{ margin: 30px 0 0 0;}
@@ -102,3 +109,7 @@
 .cont-head .util .btn.ico-filter{ background-image: url(../img/ico/icon_filter.png);}
 .cont-head .util .btn.ico-plus{ background-image: url(../img/ico/icon_plus.png);}
 .cont-head .util .btn.ico-del{ background-image: url(../img/ico/icon_del.png);}
+.cont-head.type2{ padding-top: 50px; padding-bottom: 53px; top: 65px;}
+.cont-head.type2 .page-prev{ width: 40px; height: 34px; background: url(../img/ico/icon_back.png) no-repeat center center; text-indent: -9999px; margin: 0; display: inline-block; position: absolute; top: 25px; left: 30px;}
+.cont-head.type2 .tit{ background-image: none; font-weight: 700; font-size: 24px; color: #161616; text-align: center; line-height: 24px; padding: 76px 0 0 0; position: relative; top: auto;}
+.cont-head.type2 .tit::before{ width: 64px; height: 64px; background: url(../img/ico/icon_title_car.png) no-repeat center center #161616; content: ''; margin: 0 0 0 -32px; display: inline-block; border-radius: 32px; position: absolute; top: 0; left: 50%;}
