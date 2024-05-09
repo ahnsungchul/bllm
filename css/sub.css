@@ -112,9 +112,34 @@
 .cont-head.type2{ padding-top: 50px; padding-bottom: 53px; top: 65px;}
 .cont-head.type2 .page-prev{ width: 40px; height: 34px; background: url(../img/ico/icon_back.png) no-repeat center center; text-indent: -9999px; margin: 0; display: inline-block; position: absolute; top: 25px; left: 30px;}
 .cont-head.type2 .tit{ background-image: none; font-weight: 700; font-size: 24px; color: #161616; text-align: center; line-height: 24px; padding: 76px 0 0 0; position: relative; top: auto;}
-.cont-head.type2 .tit::before{ width: 64px; height: 64px; background: url(../img/ico/icon_title_car.png) no-repeat center center #161616; content: ''; margin: 0 0 0 -32px; display: inline-block; border-radius: 32px; position: absolute; top: 0; left: 50%;}
+.cont-head.type2 .tit.ico-car::before{ width: 64px; height: 64px; background: url(../img/ico/icon_title_car.png) no-repeat center center #161616; content: ''; margin: 0 0 0 -32px; display: inline-block; border-radius: 32px; position: absolute; top: 0; left: 50%;}
+.cont-head.type2 .tit.ico-defense::before{ width: 64px; height: 64px; background: url(../img/ico/icon_title_car.png) no-repeat center center #161616; content: ''; margin: 0 0 0 -32px; display: inline-block; border-radius: 32px; position: absolute; top: 0; left: 50%;}
+.cont-head.type2 .tit.ico-car::before{ width: 64px; height: 64px; background: url(../img/ico/icon_title_sword.png) no-repeat center center #161616; content: ''; margin: 0 0 0 -32px; display: inline-block; border-radius: 32px; position: absolute; top: 0; left: 50%;}
+.cont-head.type2 .tit.ico-card::before{ width: 64px; height: 64px; background: url(../img/ico/icon_title_card.png) no-repeat center center #161616; content: ''; margin: 0 0 0 -32px; display: inline-block; border-radius: 32px; position: absolute; top: 0; left: 50%;}
 
 .question-box{ width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; position: relative;}
-
+.question-box .form-box{ width: 500px;}
 
 .list-box{ width: 362px; display: flex; flex-direction: column; position: absolute; left: 30px; top: 0; bottom: 0;}
+.list-box .list-head .tit{ font-weight: 400; font-size: 14px; color: #949494; line-height: 14px;}
+.list-box .list-body{ padding-right: 12px; margin-top: 18px; flex: 1; overflow-y: auto;}
+.list-box .list-body::-webkit-scrollbar { width: 10px;}
+.list-box .list-body::-webkit-scrollbar-thumb { width: 10px; background-color: #D9D9D9; border-radius: 5px;}
+.list-box .list-body::-webkit-scrollbar-track { border-radius: 5px;}
+.list-box .list-body .item-box{ display: flex; flex-direction: column;}
+.list-box .list-body .item + .item{ margin: 10px 0 0 0;}
+.list-box .list-body .item a{ width: 100%; height: 44px; background: url(../img/ico/_icon_review_qa.png) no-repeat calc(100% - 15px) center #fff; font-weight: 400; font-size: 14px; color: #949494; line-height: 14px; padding: 14px 39px 16px 15px; display: inline-block; border-radius: 3px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+.list-box .list-body .item a:hover{ background-image: url(../img/ico/_icon_review_qa_blue.png); color: #0075FF;}
+.list-box .list-body .item a.active{ background-image: url(../img/ico/_icon_review_qa_black.png); color: #161616;}
+
+.form-box{ display: flex; flex-direction: column;}
+.form-box dl + dl{ margin: 40px 0 0 0;}
+.form-box dt{ font-weight: 400; font-size: 14px; color: #161616; line-height: 14px;}
+.form-box dd{ margin: 18px 0 0 0;}
+.form-box .input textarea{ width: 100%; height: 74px; font-family: 'nts'; font-weight: 400; font-size: 14px; color: #161616; line-height: 18px; padding: 13px 17px; border: 1px solid #D0D0D0; border-radius: 6px; box-sizing: border-box; resize: none;}
+.form-box .input textarea::placeholder{ color: #161616;}
+.form-box .btn{ margin: 12px 0 0 0; display: flex;}
+.form-box .btn button + button{ margin-left: 12px;}
+.form-box .btn .btn-type1{ height: 44px; background-color:#0075FF; font-weight: 400; font-size: 14px; color: #fff; line-height: 16px; padding: 0 20px;  display: flex; align-items: center; flex: 1; justify-content: center; border-radius: 3px;}
+.form-box .btn .btn-type3{ height: 44px; background-color:#808A97; font-weight: 400; font-size: 14px; color: #fff; line-height: 16px; padding: 0 20px;  display: flex; align-items: center; flex: 1; justify-content: center; border-radius: 3px;}
+.form-box .txt p{ width: 100%; height: 162px; background-color: #fff; font-weight: 400; font-size: 14px; color: #161616; line-height: 24px; padding: 13px 17px; display: inline-block; border-radius: 6px;}
