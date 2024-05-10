@@ -72,3 +72,52 @@ const datasetSelect = function(select){
     $(document).find(".list-card").hide();
     $(document).find(".list-card[data-dataset="+_val+"]").show();
 }
+
+const modelSelect = function(id){
+    $("#dataSetBtn").prop("disabled",false);
+    $("#next").prop("disabled",false);
+}
+
+const modelStrengthen = {
+    step : function(num){
+        if(num == 1){
+            $("#question").val() != "" ? modelStrengthen.mov(1) : '';
+        }else if(num == 2){
+            if($("input[name=starChk]:checked").length > 0 && $("input[name=synthesizeChk]:checked").length > 0){
+                modelStrengthen.mov(2);
+            }
+        }else if(num == 3){
+            $("#btnPass").prop("disabled",true);
+            $("#btnModelStrengthen").prop("disabled",false);
+            $("#btnTemplate").prop("disabled",false);
+            $("#next").prop("disabled",false);
+            modelStrengthen.mov(3);
+        }
+    },
+    mov : function(num){
+        $("#modelStrengthenStep").removeClass("step1");
+        $("#modelStrengthenStep").removeClass("step2");
+        $("#modelStrengthenStep").removeClass("step3");
+        $("#modelStrengthenStep").addClass("step"+num);
+    },
+    del : function(num){
+        $("#modelStrengthenStep").removeClass("step1");
+        $("#modelStrengthenStep").removeClass("step2");
+        $("#modelStrengthenStep").removeClass("step3");
+        if(num == 1){
+            $("#question").val("");
+        }else if(num == 2){
+            $("#modelStrengthenStep").addClass("step1");
+        }else if(num == 3){
+            $("#modelStrengthenStep").addClass("step2");
+        }
+    },
+    next : function(id){
+        $("#lp_layout2").css("display","flex");
+        $("#lp_layout2 .lp_wrap."+id).css("display","flex");
+        $("html,body").animate({"scrollTop":0},500,function(){
+            $("#lp_layout2").removeAttr("style");
+            $("#lp_layout2 .lp_wrap."+id).removeAttr("style");
+        });
+    }
+}

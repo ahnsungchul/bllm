@@ -13,7 +13,7 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 	word-break:break-all;
 	display: block;
 }
-body{ font-family:'nts','Dotum','arial','sans-serif'; font-weight: 500; font-size:14px; letter-spacing:0;}
+body{ font-family:'nts','Dotum','arial','sans-serif'; font-weight: 500; font-size:14px; letter-spacing:-0.5px;}
 article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary{	display:block;}
 ol,ul{ list-style:none;}
 table{ border-collapse:separate; border-spacing:0;}
@@ -60,6 +60,7 @@ button:disabled{ cursor: default;}
 .flex-sb > .sb-right:first-child{ width: 100%; display: flex; justify-content: flex-end;}
 
 .flex-right{ display: flex; justify-content: flex-end;}
+.flex-right.flex-middle{ align-items: center;}
 
 .errorShow{ display: none;}
 
@@ -80,6 +81,10 @@ table td{ display: table-cell; border-collapse: collapse;}
 #lp_layout .lp_wrap{ background-color: #fff; display: none; position: absolute;}
 #lp_layout.on{ display: block;}
 #lp_layout .lp_wrap.on{ display: flex;}
+
+#lp_layout2{ width: 100%; height: 100%; display: none; align-items: center; justify-content: center; position: fixed; top: 0; left: 0; z-index: 99;}
+#lp_layout2 .lp_wrap{ background-color: #161616; display: none; position: absolute;}
+
 
 .scroll-y{ height: 100%; overflow-y: auto;}
 
