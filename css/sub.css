@@ -216,6 +216,26 @@
 .model-box .item-box .select input:checked ~ .box{ border-color: #0075FF;}
 .model-box .item-box .select input:checked ~ .box .txt-info{ display: inline-block;}
 
+.template-box{ width: 100%; margin: 30px 0 0 0;}
+.template-box .item-box{ display: flex; justify-content: space-between;}
+.template-box .item-box .item{ width: 255px; height: 400px;}
+.template-box .item-box .select{ width: 100%; height: 100%; position: relative;}
+.template-box .item-box .select input{ position: absolute; top: 0; left: -9999px;}
+.template-box .item-box .box{ width: 100%; height: 100%;  background: no-repeat center 162px #fff; padding: 20px; display: flex; flex-direction: column; border: 1px solid #B0B0B0; border-radius: 8px; box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.15); position: relative; cursor: pointer;}
+.template-box .item-box .item.chatbot .box{ background-image: url(../img/ico/chatbot_ui.png);}
+.template-box .item-box .item.qa .box{ background-image: url(../img/ico/qa_ui.png);}
+.template-box .item-box .item.callbot .box{ background-image: url(../img/ico/callbot_ui.png);}
+.template-box .item-box .item.callbot2 .box{ background-image: url(../img/ico/callbot_ui2.png);}
+.template-box .item-box .tit{ font-weight: 400; font-size: 24px; color: #000; line-height: 32px;}
+.template-box .item-box .tit span{ font-weight: 400; font-size: 16px; color: #161616; line-height: 32px; display: inline-block;}
+.template-box .item-box .txt{ font-weight: 400; font-size: 13px; color: #585858; line-height: 22px; margin: 10px 0 0 0; flex: 1;}
+.template-box .item-box .txt-info{ color: #0075FF; display: none;}
+.template-box .item-box .select input:disabled ~ .box{ border-color: #D7D7D7; box-shadow: none; cursor: default;}
+.template-box .item-box .select input:disabled ~ .box .tit,
+.template-box .item-box .select input:disabled ~ .box .txt{ color: #B0B0B0;}
+.template-box .item-box .select input:checked ~ .box{ border-color: #0075FF;}
+.template-box .item-box .select input:checked ~ .box .txt-info{ display: inline-block;}
+
 .modelStrengthen-box{ padding-left: 44px; position: relative;}
 .modelStrengthen-box .form-box{ position: relative;}
 .modelStrengthen-box .form-box::before{ width: 34px; height: 34px; background-color: #CCD1D8; content: ''; border-radius: 17px; position: absolute; top: -8px; left: -44px;}

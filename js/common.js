@@ -115,9 +115,10 @@ const modelStrengthen = {
     next : function(id){
         $("#lp_layout2").css("display","flex");
         $("#lp_layout2 .lp_wrap."+id).css("display","flex");
-        $("html,body").animate({"scrollTop":0},500,function(){
+        $("html,body").animate({"scrollTop":0},500);
+        setTimeout(function(){
             $("#lp_layout2").removeAttr("style");
             $("#lp_layout2 .lp_wrap."+id).removeAttr("style");
-        });
+        },2000);
     }
 }
