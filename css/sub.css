@@ -234,7 +234,7 @@
 .template-box .item-box .select input:disabled ~ .box .tit,
 .template-box .item-box .select input:disabled ~ .box .tit span,
 .template-box .item-box .select input:disabled ~ .box .txt{ color: #B0B0B0;}
-.template-box .item-box .select input:checked ~ .box{ padding: 19px; border: 2px solid #0075FF;}
+.template-box .item-box .select input:checked ~ .box{ background-position: center 161px; padding: 19px; border: 2px solid #0075FF;}
 .template-box .item-box .select input:checked ~ .box .txt-info{ display: inline-block;}
 
 .modelStrengthen-box{ padding-left: 44px; position: relative;}
